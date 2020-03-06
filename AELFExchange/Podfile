@@ -1,0 +1,67 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'AELFExchange' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+
+  # Pods for AELFExchange
+
+  pod 'Alamofire', '~> 4.2.0'
+  pod 'HandyJSON', '~> 5.0.0-beta.1'
+  pod 'Kingfisher', '~> 4.10.1'
+  pod 'PINCache', '~> 2.3'
+  pod 'KeychainAccess', '~> 3.1.1'
+  pod 'ReactiveCocoa', '~> 8.0.0'
+  pod 'PromiseKit', '~> 6.8'
+  pod 'CryptoSwift', '~> 0.11.0'
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'RealmSwift', '~> 3.7.6'
+  pod 'IQKeyboardManagerSwift', '~> 6.1.1'
+  pod 'PKHUD', '~> 5.2.0'
+  pod 'Toast-Swift', '~> 4.0.0'
+  pod 'ChameleonFramework', '~> 2.1.0'
+  pod 'JPush', '~> 3.1.0'
+  pod 'Bugly', '~> 2.5.0'
+  pod 'MJRefresh', '~> 3.1.15.7'
+  pod 'FSPagerView', '~> 0.8.2'
+  pod 'CHIPageControl', '~> 0.1.7'
+  pod 'zxcvbn-ios', '~> 1.0.4'
+  pod 'MarqueeLabel/Swift', '~> 3.2.0'
+  pod 'MJRefresh', '~> 3.1.15.7'
+  pod 'UMCCommon', '~> 1.5.3'
+  pod 'UMCAnalytics', '~> 5.5.2'
+  pod 'UMCSecurityPlugins', '~> 1.0.6'
+  pod 'CocoaAsyncSocket', '~> 7.6.3'
+  pod 'DatePickerDialog', '~> 2.0'
+  pod 'CircleProgressView', '~> 1.1.3'
+  pod 'WebViewJavascriptBridge', '~> 6.0.3'
+  pod 'tingyunApp', '~> 2.13.0'
+  pod 'ReachabilitySwift', '~> 4.3.1'
+  pod 'PPSPing', '~> 0.3.0'
+  pod 'DZNEmptyDataSet', '~> 1.8.1'
+  
+  # Dependencies of Scrollable Label.
+  pod 'ReactiveObjC', '~> 3.1.0'
+  
+#  暂时需要手动更改Swift版本,因为和flutter_application_path冲突,解决方案:https://stackoverflow.com/questions/40508957/invalid-podfile-file-specifying-multiple-post-install-hooks-is-unsupported
+#  post_install do |installer|
+#      installer.pods_project.targets.each do |target|
+#          if target.name == 'DatePickerDialog' || target.name == 'CircleProgressView'
+#              target.build_configurations.each do |config|
+#                  config.build_settings['SWIFT_VERSION'] = '4.0'
+#              end
+#          end
+#          if target.name == 'Alamofire'
+#              target.build_configurations.each do |config|
+#                  config.build_settings['SWIFT_VERSION'] = '4.2'
+#              end
+#          end
+#      end
+#  end
+
+end
+
+flutter_application_path = '../../cex-flutter/cex_flutter_module'
+eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MarketOrderHeaderLatestDeal" customModule="AELFExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7D9-ZG-OBf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zam-hm-Ee4" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="94" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.2627450980392157" green="0.27058823529411763" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="时间"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="方向" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os6-O5-iRh" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                            <rect key="frame" x="94" y="0.0" width="93.5" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.2627450980392157" green="0.27058823529411763" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="方向"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glg-Es-G8C" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                            <rect key="frame" x="187.5" y="0.0" width="94" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.26274509800000001" green="0.27058823529999998" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="价格"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPr-nj-DzE" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                            <rect key="frame" x="281.5" y="0.0" width="93.5" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.2627450980392157" green="0.27058823529411763" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="数量"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7D9-ZG-OBf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lx6-Rz-EkB"/>
+                <constraint firstItem="7D9-ZG-OBf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UZC-FQ-srs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7D9-ZG-OBf" secondAttribute="trailing" id="Xvn-9D-KLw"/>
+                <constraint firstAttribute="bottom" secondItem="7D9-ZG-OBf" secondAttribute="bottom" id="s9h-Lm-iIL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="label1" destination="zam-hm-Ee4" id="bmK-AK-Bmd"/>
+                <outlet property="label2" destination="os6-O5-iRh" id="dc0-YD-cKf"/>
+                <outlet property="label3" destination="glg-Es-G8C" id="LeF-Nh-d2i"/>
+                <outlet property="label4" destination="xPr-nj-DzE" id="mqH-2m-wkD"/>
+            </connections>
+            <point key="canvasLocation" x="130.40000000000001" y="-129.98500749625188"/>
+        </view>
+    </objects>
+</document>

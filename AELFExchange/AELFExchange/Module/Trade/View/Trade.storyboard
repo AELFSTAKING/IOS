@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sYb-CI-DZQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--交易-->
+        <scene sceneID="yJX-EY-7np">
+            <objects>
+                <viewController storyboardIdentifier="trade" title="交易" id="sYb-CI-DZQ" customClass="TradeVC" customModule="AELFExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fwn-bf-f23">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="867"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC1-wx-30B" userLabel="naviBgView" customClass="View" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Foreground" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ta-my-g4e" userLabel="navigationView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIV-3q-hsz">
+                                        <rect key="frame" x="329" y="0.0" width="46" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="LDW-W7-BO5"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-mk-kline-index"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="marketIndexPressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="ePl-Wk-JWy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikd-nP-Baa">
+                                        <rect key="frame" x="161" y="5" width="55" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="---/---">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="symbolPressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="irc-Yq-VyH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTD-5B-ZWF">
+                                        <rect key="frame" x="218" y="0.0" width="12.5" height="44"/>
+                                        <state key="normal" image="icon-mk-arrow-large-down"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="symbolPressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="fGk-28-CaL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVq-xI-xDg">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="dsA-qq-StT"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icon-backarrow"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backPressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="m9b-IQ-FTD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ikd-nP-Baa" firstAttribute="centerY" secondItem="0ta-my-g4e" secondAttribute="centerY" id="3ti-x9-P65"/>
+                                    <constraint firstItem="bTD-5B-ZWF" firstAttribute="top" secondItem="0ta-my-g4e" secondAttribute="top" id="Ag7-nA-7d8"/>
+                                    <constraint firstItem="eVq-xI-xDg" firstAttribute="top" secondItem="0ta-my-g4e" secondAttribute="top" id="DWA-XR-T2S"/>
+                                    <constraint firstAttribute="height" constant="44" id="F7K-Gj-GEV"/>
+                                    <constraint firstItem="eVq-xI-xDg" firstAttribute="leading" secondItem="0ta-my-g4e" secondAttribute="leading" id="GrF-UD-8hV"/>
+                                    <constraint firstAttribute="bottom" secondItem="bTD-5B-ZWF" secondAttribute="bottom" id="Mg9-ve-U5B"/>
+                                    <constraint firstAttribute="trailing" secondItem="jIV-3q-hsz" secondAttribute="trailing" id="R6l-GV-MQV"/>
+                                    <constraint firstItem="Ikd-nP-Baa" firstAttribute="centerX" secondItem="0ta-my-g4e" secondAttribute="centerX" id="aEc-SC-aG4"/>
+                                    <constraint firstItem="jIV-3q-hsz" firstAttribute="top" secondItem="0ta-my-g4e" secondAttribute="top" id="eUW-6e-vS9"/>
+                                    <constraint firstItem="bTD-5B-ZWF" firstAttribute="leading" secondItem="Ikd-nP-Baa" secondAttribute="trailing" constant="3" id="f3P-HW-gra"/>
+                                    <constraint firstItem="bTD-5B-ZWF" firstAttribute="centerY" secondItem="Ikd-nP-Baa" secondAttribute="centerY" id="kw8-EY-QYm"/>
+                                    <constraint firstAttribute="bottom" secondItem="jIV-3q-hsz" secondAttribute="bottom" id="t5G-76-XG0"/>
+                                    <constraint firstAttribute="bottom" secondItem="eVq-xI-xDg" secondAttribute="bottom" id="xLe-A3-NbK"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJG-Ld-qkC">
+                                <rect key="frame" x="0.0" y="88" width="375" height="745"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="et3-io-58r">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="745"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOn-Fy-r3r" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="20" width="81.5" height="30"/>
+                                                <color key="backgroundColor" red="0.011764705882352941" green="0.71372549019607845" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="pU1-ti-1dZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <state key="normal" title="买入">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LargeFont" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableButtonTitle" value="买入"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buyModePressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="JhO-06-qpS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qN-sg-G7b" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="101.5" y="20" width="81" height="30"/>
+                                                <color key="backgroundColor" red="0.094117647058823528" green="0.10196078431372549" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="pgG-cJ-QVL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <state key="normal" title="卖出">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LargeFont" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableButtonTitle" value="卖出"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sellModePressde:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="eLg-0q-uv4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTy-O7-bPG" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="65" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="限价单"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LargeFont" value="15"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableButtonTitle" value="限价单"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="orderTypePressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="NJy-P4-p9p"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3z-al-JuH" customClass="TextField" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="100" width="172.5" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="D2r-az-DsL"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="PriceMode" value="1"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="≈ ---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SM-sf-tVe" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="153" width="172.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czC-3X-vpA" customClass="TextField" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="179.5" width="172.5" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="yfz-4c-Yv9"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="QuantityMode" value="1"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZTV-F7-pvi">
+                                                <rect key="frame" x="10" y="247.5" width="172.5" height="20"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eh-5k-FkP" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20"/>
+                                                        <color key="backgroundColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="25%"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="SmallFont" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="percent25Presseed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="tXG-iX-58H"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-jv-Jcf" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                        <rect key="frame" x="43.5" y="0.0" width="42" height="20"/>
+                                                        <color key="backgroundColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="50%"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="SmallFont" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="percent50Pressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="A1x-83-lVa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFk-AP-72Z" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                        <rect key="frame" x="87.5" y="0.0" width="41.5" height="20"/>
+                                                        <color key="backgroundColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="75%"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="SmallFont" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="percent75Pressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="GNV-SJ-gfa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDh-sQ-tyH" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                        <rect key="frame" x="131" y="0.0" width="41.5" height="20"/>
+                                                        <color key="backgroundColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="100%"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="SmallFont" value="1"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="percent100Pressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="CKG-0j-UwC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="3bw-50-j4H"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9l-IJ-CPv" userLabel="dealAmountBgView">
+                                                <rect key="frame" x="10" y="304" width="172.5" height="39"/>
+                                                <color key="backgroundColor" red="0.094117647058823528" green="0.10196078431372549" blue="0.18431372549019609" alpha="0.53959760273972601" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="56E-Vl-iDL">
+                                                <rect key="frame" x="53" y="302" width="86.5" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="FNf-2U-pm4"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可用:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSZ-rF-NIf" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="277.5" width="28.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="可用"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTY-eA-Z9O" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="277.5" width="11.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhD-5X-Y4z" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="41.5" y="277.5" width="25.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWK-bn-Qz1" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="355" width="172.5" height="43"/>
+                                                <color key="backgroundColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="Vk8-Qz-g6g"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <state key="normal" title="买入"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LargeFont" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="WhiteText" value="1"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitPressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="A64-Rt-hgf"/>
+                                                </connections>
+                                            </button>
+                                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-At-K7U">
+                                                <rect key="frame" x="192.5" y="20" width="172.5" height="343"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eT-kC-uoS" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="192.5" y="373" width="79" height="25"/>
+                                                <color key="backgroundColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="30o-ZZ-1tZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="-位小数"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="depthPressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="DtQ-Om-zbJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHd-35-fB3" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="286.5" y="373" width="78.5" height="25"/>
+                                                <color key="backgroundColor" red="0.41960784309999999" green="0.43529411759999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="默认"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableButtonTitle" value="默认"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ordersCurrentTypePressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="ErT-jz-ZTD"/>
+                                                </connections>
+                                            </button>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MmG-EJ-Zce">
+                                                <rect key="frame" x="0.0" y="438" width="375" height="307"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="市价" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P76-ae-dRn" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="100" width="172.5" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="17"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="市价"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCJ-MQ-rTK">
+                                                <rect key="frame" x="56" y="65" width="20" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="Gs2-i3-pKy"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" image="icon-mk-arrow-small-down"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="orderTypePressed:" destination="sYb-CI-DZQ" eventType="touchUpInside" id="3ct-z6-X1K"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成交额" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-P9-MD8">
+                                                <rect key="frame" x="15" y="302" width="38" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" red="0.49019607843137253" green="0.49803921568627452" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="成交额"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-Uj-8Ya">
+                                                <rect key="frame" x="139.5" y="302" width="38" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" red="0.49019607840000001" green="0.49803921569999998" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxV-1r-IgI">
+                                                <rect key="frame" x="0.0" y="428" width="375" height="10"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="bf3-Pu-ita"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="5qN-sg-G7b" firstAttribute="width" secondItem="KOn-Fy-r3r" secondAttribute="width" id="2Dz-oG-xhn"/>
+                                            <constraint firstItem="ZTV-F7-pvi" firstAttribute="trailing" secondItem="czC-3X-vpA" secondAttribute="trailing" id="2sq-tJ-SIY"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="leading" secondItem="Z3z-al-JuH" secondAttribute="trailing" constant="10" id="481-5f-7hr"/>
+                                            <constraint firstItem="iCJ-MQ-rTK" firstAttribute="leading" secondItem="WTy-O7-bPG" secondAttribute="trailing" id="5Hm-6h-uUw"/>
+                                            <constraint firstItem="iCJ-MQ-rTK" firstAttribute="height" secondItem="WTy-O7-bPG" secondAttribute="height" id="74t-b1-QrQ"/>
+                                            <constraint firstItem="MmG-EJ-Zce" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" id="7Lv-WJ-Ljb"/>
+                                            <constraint firstAttribute="trailing" secondItem="qxV-1r-IgI" secondAttribute="trailing" id="7PI-I6-0jC"/>
+                                            <constraint firstItem="8SM-sf-tVe" firstAttribute="trailing" secondItem="Z3z-al-JuH" secondAttribute="trailing" id="7gB-LM-nUX"/>
+                                            <constraint firstItem="56E-Vl-iDL" firstAttribute="leading" secondItem="cxa-P9-MD8" secondAttribute="trailing" id="7to-Bp-HUH"/>
+                                            <constraint firstItem="WTy-O7-bPG" firstAttribute="top" secondItem="KOn-Fy-r3r" secondAttribute="bottom" constant="15" id="86m-Mu-QdV"/>
+                                            <constraint firstItem="k9l-IJ-CPv" firstAttribute="top" secondItem="cxa-P9-MD8" secondAttribute="top" constant="2" id="B0D-SF-X8q"/>
+                                            <constraint firstAttribute="bottom" secondItem="MmG-EJ-Zce" secondAttribute="bottom" id="Clf-21-eoa"/>
+                                            <constraint firstItem="Idt-Uj-8Ya" firstAttribute="top" secondItem="56E-Vl-iDL" secondAttribute="top" id="CtH-3H-MHv"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="leading" secondItem="KWK-bn-Qz1" secondAttribute="trailing" constant="10" id="EmU-40-gNl"/>
+                                            <constraint firstItem="ZTV-F7-pvi" firstAttribute="top" secondItem="czC-3X-vpA" secondAttribute="bottom" constant="25" id="Ewz-y7-MLJ"/>
+                                            <constraint firstItem="KWK-bn-Qz1" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" constant="10" id="FH7-X6-Dki"/>
+                                            <constraint firstItem="rHd-35-fB3" firstAttribute="width" secondItem="4eT-kC-uoS" secondAttribute="width" id="GQ4-DP-McK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vrt-At-K7U" secondAttribute="trailing" constant="10" id="I0x-Vk-m4m"/>
+                                            <constraint firstItem="rHd-35-fB3" firstAttribute="leading" secondItem="4eT-kC-uoS" secondAttribute="trailing" constant="15" id="ILc-dh-0ct"/>
+                                            <constraint firstItem="rHd-35-fB3" firstAttribute="trailing" secondItem="Vrt-At-K7U" secondAttribute="trailing" id="Ixw-Mh-S4p"/>
+                                            <constraint firstItem="Idt-Uj-8Ya" firstAttribute="leading" secondItem="56E-Vl-iDL" secondAttribute="trailing" id="Kkb-Yo-vHH"/>
+                                            <constraint firstItem="WTy-O7-bPG" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" constant="10" id="L0D-9b-cwo"/>
+                                            <constraint firstItem="k9l-IJ-CPv" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" constant="10" id="LeB-6g-pp1"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="top" secondItem="KOn-Fy-r3r" secondAttribute="top" id="Lme-pp-NY1"/>
+                                            <constraint firstItem="5qN-sg-G7b" firstAttribute="top" secondItem="et3-io-58r" secondAttribute="top" constant="20" id="Nag-gz-32O"/>
+                                            <constraint firstItem="KOn-Fy-r3r" firstAttribute="top" secondItem="et3-io-58r" secondAttribute="top" constant="20" id="Ngk-l6-WRw"/>
+                                            <constraint firstItem="P76-ae-dRn" firstAttribute="leading" secondItem="Z3z-al-JuH" secondAttribute="leading" id="OXz-JL-qfs"/>
+                                            <constraint firstItem="P76-ae-dRn" firstAttribute="top" secondItem="Z3z-al-JuH" secondAttribute="top" id="PAo-ak-nLT"/>
+                                            <constraint firstItem="Z3z-al-JuH" firstAttribute="trailing" secondItem="et3-io-58r" secondAttribute="centerX" constant="-5" id="Q7h-YJ-Npy"/>
+                                            <constraint firstItem="rHd-35-fB3" firstAttribute="height" secondItem="4eT-kC-uoS" secondAttribute="height" id="QDg-2p-vw5"/>
+                                            <constraint firstItem="5qN-sg-G7b" firstAttribute="leading" secondItem="KOn-Fy-r3r" secondAttribute="trailing" constant="10" id="SDf-1r-dPo"/>
+                                            <constraint firstItem="cxa-P9-MD8" firstAttribute="bottom" secondItem="56E-Vl-iDL" secondAttribute="bottom" id="SQO-IY-5e5"/>
+                                            <constraint firstItem="5qN-sg-G7b" firstAttribute="leading" secondItem="KOn-Fy-r3r" secondAttribute="trailing" constant="10" id="Sik-ro-MKS"/>
+                                            <constraint firstItem="8SM-sf-tVe" firstAttribute="top" secondItem="Z3z-al-JuH" secondAttribute="bottom" constant="10" id="Sll-i8-MKp"/>
+                                            <constraint firstItem="rHd-35-fB3" firstAttribute="top" secondItem="4eT-kC-uoS" secondAttribute="top" id="TEb-mV-n04"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="leading" secondItem="Idt-Uj-8Ya" secondAttribute="trailing" constant="15" id="Uix-VE-yob"/>
+                                            <constraint firstItem="qxV-1r-IgI" firstAttribute="top" secondItem="KWK-bn-Qz1" secondAttribute="bottom" constant="30" id="Z5E-7M-040"/>
+                                            <constraint firstItem="P76-ae-dRn" firstAttribute="bottom" secondItem="Z3z-al-JuH" secondAttribute="bottom" id="ZOp-AF-iXR"/>
+                                            <constraint firstItem="8SM-sf-tVe" firstAttribute="leading" secondItem="Z3z-al-JuH" secondAttribute="leading" id="a3f-as-VI2"/>
+                                            <constraint firstItem="56E-Vl-iDL" firstAttribute="top" secondItem="RSZ-rF-NIf" secondAttribute="bottom" constant="10" id="aLB-Jn-grz"/>
+                                            <constraint firstItem="iCJ-MQ-rTK" firstAttribute="centerY" secondItem="WTy-O7-bPG" secondAttribute="centerY" id="b0P-xl-zpJ"/>
+                                            <constraint firstItem="4eT-kC-uoS" firstAttribute="leading" secondItem="Vrt-At-K7U" secondAttribute="leading" id="bY2-D1-8Fa"/>
+                                            <constraint firstItem="Z3z-al-JuH" firstAttribute="top" secondItem="WTy-O7-bPG" secondAttribute="bottom" constant="5" id="cvb-zK-fSI"/>
+                                            <constraint firstAttribute="trailing" secondItem="MmG-EJ-Zce" secondAttribute="trailing" id="d89-ey-xRh"/>
+                                            <constraint firstItem="czC-3X-vpA" firstAttribute="leading" secondItem="Z3z-al-JuH" secondAttribute="leading" id="dJu-aK-vKJ"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NTY-eA-Z9O" secondAttribute="trailing" constant="10" id="e7U-vR-Azq"/>
+                                            <constraint firstItem="4eT-kC-uoS" firstAttribute="top" secondItem="Vrt-At-K7U" secondAttribute="bottom" constant="10" id="fE8-9J-str"/>
+                                            <constraint firstItem="Idt-Uj-8Ya" firstAttribute="bottom" secondItem="56E-Vl-iDL" secondAttribute="bottom" id="i63-E8-8S5"/>
+                                            <constraint firstItem="ZTV-F7-pvi" firstAttribute="leading" secondItem="czC-3X-vpA" secondAttribute="leading" id="iQA-CY-CeZ"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="leading" secondItem="5qN-sg-G7b" secondAttribute="trailing" constant="10" id="iy7-ia-Lpo"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="leading" secondItem="k9l-IJ-CPv" secondAttribute="trailing" constant="10" id="jpf-ho-jew"/>
+                                            <constraint firstItem="RSZ-rF-NIf" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" constant="10" id="juW-wT-YtO"/>
+                                            <constraint firstItem="NTY-eA-Z9O" firstAttribute="leading" secondItem="IhD-5X-Y4z" secondAttribute="trailing" constant="3" id="lbr-aq-0ns"/>
+                                            <constraint firstItem="KWK-bn-Qz1" firstAttribute="top" secondItem="56E-Vl-iDL" secondAttribute="bottom" constant="10" id="lsA-rI-Tp3"/>
+                                            <constraint firstItem="qxV-1r-IgI" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" id="nEl-dG-Qt2"/>
+                                            <constraint firstItem="MmG-EJ-Zce" firstAttribute="top" secondItem="qxV-1r-IgI" secondAttribute="bottom" id="nF8-il-fT4"/>
+                                            <constraint firstItem="cxa-P9-MD8" firstAttribute="top" secondItem="56E-Vl-iDL" secondAttribute="top" id="ne6-VA-qZe"/>
+                                            <constraint firstItem="czC-3X-vpA" firstAttribute="trailing" secondItem="Z3z-al-JuH" secondAttribute="trailing" id="oDk-4h-MdX"/>
+                                            <constraint firstItem="czC-3X-vpA" firstAttribute="top" secondItem="8SM-sf-tVe" secondAttribute="bottom" constant="12" id="q0d-B5-w8b"/>
+                                            <constraint firstItem="IhD-5X-Y4z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RSZ-rF-NIf" secondAttribute="trailing" id="s8Q-WZ-u8Q"/>
+                                            <constraint firstItem="k9l-IJ-CPv" firstAttribute="bottom" secondItem="cxa-P9-MD8" secondAttribute="bottom" constant="-2" id="t4I-7e-6Ns"/>
+                                            <constraint firstItem="IhD-5X-Y4z" firstAttribute="top" secondItem="RSZ-rF-NIf" secondAttribute="top" id="t5G-Ak-eHD"/>
+                                            <constraint firstItem="P76-ae-dRn" firstAttribute="trailing" secondItem="Z3z-al-JuH" secondAttribute="trailing" id="tZ1-MX-ZYN"/>
+                                            <constraint firstItem="NTY-eA-Z9O" firstAttribute="top" secondItem="RSZ-rF-NIf" secondAttribute="top" id="tZD-vr-Etz"/>
+                                            <constraint firstItem="Vrt-At-K7U" firstAttribute="bottom" secondItem="KWK-bn-Qz1" secondAttribute="bottom" constant="-35" id="tqh-wR-9zF"/>
+                                            <constraint firstItem="Z3z-al-JuH" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" constant="10" id="uF9-xR-MAu"/>
+                                            <constraint firstItem="56E-Vl-iDL" firstAttribute="leading" secondItem="czC-3X-vpA" secondAttribute="leading" constant="43" id="uO8-vx-Yzl"/>
+                                            <constraint firstItem="rHd-35-fB3" firstAttribute="leading" secondItem="4eT-kC-uoS" secondAttribute="trailing" constant="15" id="ula-qy-Uq5"/>
+                                            <constraint firstItem="KOn-Fy-r3r" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" constant="10" id="uwY-iG-y0J"/>
+                                            <constraint firstItem="IhD-5X-Y4z" firstAttribute="leading" secondItem="RSZ-rF-NIf" secondAttribute="trailing" constant="3" id="vUV-Ac-Tb1"/>
+                                            <constraint firstItem="cxa-P9-MD8" firstAttribute="leading" secondItem="et3-io-58r" secondAttribute="leading" constant="15" id="wPd-5b-xRw"/>
+                                            <constraint firstItem="56E-Vl-iDL" firstAttribute="trailing" secondItem="czC-3X-vpA" secondAttribute="trailing" constant="-43" id="y6n-mh-qhK"/>
+                                            <constraint firstItem="RSZ-rF-NIf" firstAttribute="top" secondItem="ZTV-F7-pvi" secondAttribute="bottom" constant="10" id="z1H-Bx-Ecg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="et3-io-58r" firstAttribute="leading" secondItem="iJG-Ld-qkC" secondAttribute="leading" id="52l-Ao-Viw"/>
+                                    <constraint firstItem="et3-io-58r" firstAttribute="top" secondItem="iJG-Ld-qkC" secondAttribute="top" id="Nfv-IG-pir"/>
+                                    <constraint firstItem="et3-io-58r" firstAttribute="width" secondItem="iJG-Ld-qkC" secondAttribute="width" id="VYB-Yv-e04"/>
+                                    <constraint firstItem="et3-io-58r" firstAttribute="height" secondItem="iJG-Ld-qkC" secondAttribute="height" id="lQz-YP-I4e"/>
+                                    <constraint firstAttribute="bottom" secondItem="et3-io-58r" secondAttribute="bottom" id="p4e-Qj-QLJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="et3-io-58r" secondAttribute="trailing" id="qkJ-AI-Ur9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0ta-my-g4e" firstAttribute="leading" secondItem="zLU-Hx-A0K" secondAttribute="leading" id="TEP-CA-zL1"/>
+                            <constraint firstItem="sC1-wx-30B" firstAttribute="leading" secondItem="zLU-Hx-A0K" secondAttribute="leading" id="TSc-ws-EMV"/>
+                            <constraint firstItem="0ta-my-g4e" firstAttribute="trailing" secondItem="zLU-Hx-A0K" secondAttribute="trailing" id="Uu9-RT-rEE"/>
+                            <constraint firstItem="sC1-wx-30B" firstAttribute="trailing" secondItem="zLU-Hx-A0K" secondAttribute="trailing" id="Uzq-w8-GpZ"/>
+                            <constraint firstItem="iJG-Ld-qkC" firstAttribute="top" secondItem="sC1-wx-30B" secondAttribute="bottom" id="f7v-0U-9Ms"/>
+                            <constraint firstItem="zLU-Hx-A0K" firstAttribute="bottom" secondItem="iJG-Ld-qkC" secondAttribute="bottom" id="fQz-dg-j0F"/>
+                            <constraint firstItem="0ta-my-g4e" firstAttribute="top" secondItem="zLU-Hx-A0K" secondAttribute="top" id="iGm-ww-7g3"/>
+                            <constraint firstItem="zLU-Hx-A0K" firstAttribute="trailing" secondItem="iJG-Ld-qkC" secondAttribute="trailing" id="pB6-sg-7XW"/>
+                            <constraint firstItem="iJG-Ld-qkC" firstAttribute="leading" secondItem="zLU-Hx-A0K" secondAttribute="leading" id="qBv-if-PI9"/>
+                            <constraint firstItem="sC1-wx-30B" firstAttribute="bottom" secondItem="0ta-my-g4e" secondAttribute="bottom" id="sak-bn-6dE"/>
+                            <constraint firstItem="sC1-wx-30B" firstAttribute="top" secondItem="Fwn-bf-f23" secondAttribute="top" id="vdv-EQ-Syx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zLU-Hx-A0K"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="867"/>
+                    <connections>
+                        <outlet property="availableQuantityCurrencyLabel" destination="NTY-eA-Z9O" id="2GL-vU-Qi4"/>
+                        <outlet property="availableQuantityValueLabel" destination="IhD-5X-Y4z" id="5cc-vR-iRT"/>
+                        <outlet property="backButton" destination="eVq-xI-xDg" id="JcC-gh-Zfl"/>
+                        <outlet property="bottomSepView" destination="qxV-1r-IgI" id="G0v-um-WPk"/>
+                        <outlet property="buyModeButton" destination="KOn-Fy-r3r" id="P4o-v3-CCe"/>
+                        <outlet property="contentView" destination="et3-io-58r" id="LCu-Vf-Ri0"/>
+                        <outlet property="contentViewHeightOffset" destination="lQz-YP-I4e" id="6st-s6-HJJ"/>
+                        <outlet property="dealAmountBgView" destination="k9l-IJ-CPv" id="g4Q-ge-Lce"/>
+                        <outlet property="dealAmountTextfield" destination="56E-Vl-iDL" id="zWJ-yL-gGE"/>
+                        <outlet property="dealAmountTextfieldHeight" destination="FNf-2U-pm4" id="UOI-1a-SU0"/>
+                        <outlet property="dealCurrencyLabel" destination="Idt-Uj-8Ya" id="aF7-aK-vj0"/>
+                        <outlet property="dealQuantityTitleLabel" destination="cxa-P9-MD8" id="Ma0-NP-59R"/>
+                        <outlet property="depthButton" destination="4eT-kC-uoS" id="trN-7X-Z2B"/>
+                        <outlet property="legalPriceLabel" destination="8SM-sf-tVe" id="6Ae-eU-jeo"/>
+                        <outlet property="legalPriceLabelTopOffset" destination="Sll-i8-MKp" id="rwq-nu-7HP"/>
+                        <outlet property="marketButton" destination="jIV-3q-hsz" id="r07-jU-7VU"/>
+                        <outlet property="marketPriceOfPriceLabel" destination="P76-ae-dRn" id="pdz-vf-SMh"/>
+                        <outlet property="navigationBgView" destination="sC1-wx-30B" id="d3H-oW-JKv"/>
+                        <outlet property="navigationView" destination="0ta-my-g4e" id="jap-oI-0zf"/>
+                        <outlet property="orderTypeButton" destination="WTy-O7-bPG" id="QL2-Uq-kH6"/>
+                        <outlet property="orderTypeIconButton" destination="iCJ-MQ-rTK" id="DIm-zG-k3n"/>
+                        <outlet property="ordersCurrentTableView" destination="Vrt-At-K7U" id="KYC-9a-B6Y"/>
+                        <outlet property="ordersDelegateTypeButton" destination="rHd-35-fB3" id="6ct-bT-rwc"/>
+                        <outlet property="percent100Button" destination="hDh-sQ-tyH" id="RcB-Na-UWE"/>
+                        <outlet property="percent25Button" destination="8eh-5k-FkP" id="ngj-PN-gY8"/>
+                        <outlet property="percent50Button" destination="0gH-jv-Jcf" id="K1k-zg-nLy"/>
+                        <outlet property="percent75Button" destination="RFk-AP-72Z" id="Hg0-JA-jtB"/>
+                        <outlet property="priceTextfield" destination="Z3z-al-JuH" id="gn2-Xa-2Ba"/>
+                        <outlet property="quantityTextfield" destination="czC-3X-vpA" id="x9S-VI-jNj"/>
+                        <outlet property="quantityTextfieldHeight" destination="yfz-4c-Yv9" id="BQC-f7-mOd"/>
+                        <outlet property="scrollView" destination="iJG-Ld-qkC" id="BOY-Yd-nzE"/>
+                        <outlet property="sellModeButton" destination="5qN-sg-G7b" id="HCc-An-rYB"/>
+                        <outlet property="submitButton" destination="KWK-bn-Qz1" id="rGb-RC-nVz"/>
+                        <outlet property="symbolTitleButton" destination="Ikd-nP-Baa" id="kAw-gh-Kkq"/>
+                        <outlet property="userOrdersTableView" destination="MmG-EJ-Zce" id="sAu-nF-9xX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDb-J5-tyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-420" y="-14"/>
+        </scene>
+        <!--Trade EntranceVC-->
+        <scene sceneID="U92-n4-Yth">
+            <objects>
+                <viewController storyboardIdentifier="tradeEntrance" id="YgT-ei-wWB" customClass="TradeEntranceVC" customModule="AELFExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zqp-NU-2pr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-es-eca">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Puj-A3-V5M">
+                                        <rect key="frame" x="10" y="24" width="356" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-mk-search" translatesAutoresizingMaskIntoConstraints="NO" id="hL6-2w-c2H">
+                                                <rect key="frame" x="10" y="11" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="4wC-Kq-gqZ"/>
+                                                    <constraint firstAttribute="width" constant="18" id="bhA-gw-rmJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索想要查询的币种" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zb-Zk-bSJ">
+                                                <rect key="frame" x="38" y="0.0" width="313" height="40"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.062745098039215685" green="0.070588235294117646" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Emi-GL-4kv"/>
+                                            <constraint firstItem="7zb-Zk-bSJ" firstAttribute="top" secondItem="Puj-A3-V5M" secondAttribute="top" id="GZl-aL-U1c"/>
+                                            <constraint firstItem="7zb-Zk-bSJ" firstAttribute="leading" secondItem="hL6-2w-c2H" secondAttribute="trailing" constant="10" id="lcO-o2-kuN"/>
+                                            <constraint firstAttribute="bottom" secondItem="7zb-Zk-bSJ" secondAttribute="bottom" id="rji-qH-M3V"/>
+                                            <constraint firstItem="hL6-2w-c2H" firstAttribute="leading" secondItem="Puj-A3-V5M" secondAttribute="leading" constant="10" id="xSg-zZ-H6J"/>
+                                            <constraint firstAttribute="trailing" secondItem="7zb-Zk-bSJ" secondAttribute="trailing" constant="5" id="xvo-yb-Mid"/>
+                                            <constraint firstItem="hL6-2w-c2H" firstAttribute="centerY" secondItem="Puj-A3-V5M" secondAttribute="centerY" id="ydW-KU-dsb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANU-b8-QF9">
+                                        <rect key="frame" x="366" y="29.5" width="38" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="dHe-2S-VnG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" red="0.48627450980392156" green="0.49803921568627452" blue="0.56862745098039214" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="LocalizableButtonTitle" value="取消"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelPressed:" destination="YgT-ei-wWB" eventType="touchUpInside" id="Xkf-4s-nNJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.074509803921568626" green="0.082352941176470587" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ANU-b8-QF9" firstAttribute="leading" secondItem="Puj-A3-V5M" secondAttribute="trailing" id="Eod-P2-myH"/>
+                                    <constraint firstItem="Puj-A3-V5M" firstAttribute="leading" secondItem="NtC-es-eca" secondAttribute="leading" constant="10" id="NGn-1O-6xF"/>
+                                    <constraint firstAttribute="height" constant="64" id="Wco-Wn-Jaf"/>
+                                    <constraint firstItem="ANU-b8-QF9" firstAttribute="centerY" secondItem="Puj-A3-V5M" secondAttribute="centerY" id="nWh-lA-HT3"/>
+                                    <constraint firstAttribute="trailing" secondItem="ANU-b8-QF9" secondAttribute="trailing" constant="10" id="p0c-3w-RI3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Puj-A3-V5M" secondAttribute="bottom" id="pgf-Nm-Hr2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.070588235294117646" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NtC-es-eca" firstAttribute="top" secondItem="Zqp-NU-2pr" secondAttribute="top" id="7NK-El-rXO"/>
+                            <constraint firstItem="NtC-es-eca" firstAttribute="trailing" secondItem="5DL-bO-Qt6" secondAttribute="trailing" id="FDC-pu-ZEi"/>
+                            <constraint firstItem="NtC-es-eca" firstAttribute="leading" secondItem="5DL-bO-Qt6" secondAttribute="leading" id="LpB-ln-JO2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5DL-bO-Qt6"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="ANU-b8-QF9" id="TuR-Um-j2W"/>
+                        <outlet property="cancelButtonWidth" destination="dHe-2S-VnG" id="elr-A0-XAb"/>
+                        <outlet property="navigationBarView" destination="NtC-es-eca" id="cjd-VS-N6S"/>
+                        <outlet property="navigationHeight" destination="Wco-Wn-Jaf" id="OOh-5S-Mei"/>
+                        <outlet property="searchBgView" destination="Puj-A3-V5M" id="U3l-4S-9Ct"/>
+                        <outlet property="searchTextfield" destination="7zb-Zk-bSJ" id="G4v-ws-N3r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2TY-vu-igo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-420" y="-690.40479760119945"/>
+        </scene>
+        <!--Orders DelegateVC-->
+        <scene sceneID="r7X-Zm-qL2">
+            <objects>
+                <viewController storyboardIdentifier="ordersDelegate" id="C7H-p8-PBE" customClass="OrdersDelegateVC" customModule="AELFExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Se-z9-vNd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EY6-lR-H6N">
+                                <rect key="frame" x="2" y="64" width="51" height="31"/>
+                                <connections>
+                                    <action selector="hideOtherCurrencySwithValueChanged:" destination="C7H-p8-PBE" eventType="valueChanged" id="fh2-TI-iuD"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="隐藏其他交易对" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyr-pz-CJd" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="61" y="70.5" width="108" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="隐藏其他交易对"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-mt-GoO">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j3D-aM-wxd" firstAttribute="bottom" secondItem="l3X-mt-GoO" secondAttribute="bottom" id="FLt-L7-3O8"/>
+                            <constraint firstItem="l3X-mt-GoO" firstAttribute="leading" secondItem="j3D-aM-wxd" secondAttribute="leading" id="I7s-Ly-dpj"/>
+                            <constraint firstItem="uyr-pz-CJd" firstAttribute="centerY" secondItem="EY6-lR-H6N" secondAttribute="centerY" id="NL4-Kb-oHE"/>
+                            <constraint firstItem="uyr-pz-CJd" firstAttribute="leading" secondItem="EY6-lR-H6N" secondAttribute="trailing" constant="10" id="Nzx-fj-V07"/>
+                            <constraint firstItem="j3D-aM-wxd" firstAttribute="trailing" secondItem="l3X-mt-GoO" secondAttribute="trailing" id="Odi-Qf-AId"/>
+                            <constraint firstItem="l3X-mt-GoO" firstAttribute="top" secondItem="EY6-lR-H6N" secondAttribute="bottom" constant="15" id="aov-If-KeX"/>
+                            <constraint firstItem="EY6-lR-H6N" firstAttribute="top" secondItem="j3D-aM-wxd" secondAttribute="top" constant="20" id="sE6-yy-k5j"/>
+                            <constraint firstItem="EY6-lR-H6N" firstAttribute="leading" secondItem="j3D-aM-wxd" secondAttribute="leading" constant="2" id="ydr-Nw-mVE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j3D-aM-wxd"/>
+                    </view>
+                    <connections>
+                        <outlet property="hideOtherCurrencyLabel" destination="uyr-pz-CJd" id="Pub-Wc-uju"/>
+                        <outlet property="hideOtherCurrencySwitch" destination="EY6-lR-H6N" id="jJj-Ns-3PR"/>
+                        <outlet property="tableView" destination="l3X-mt-GoO" id="we5-cQ-8AI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzh-8P-J6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="-4"/>
+        </scene>
+        <!--Order RecordsVC-->
+        <scene sceneID="OQh-Sy-NHn">
+            <objects>
+                <viewController storyboardIdentifier="orderRecords" id="ZjB-jn-xGm" customClass="OrderRecordsVC" customModule="AELFExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="He3-MG-g5U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="市场" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-bd-cvc" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="10" y="54" width="25" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="市场"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="均价/价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caw-0d-2xi" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="180.5" y="54" width="53.5" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="均价/价格"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成交数量/数量" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS4-XE-V6F" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="326" y="54" width="78" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="成交数量/数量"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e7F-Pk-b5r">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qPH-jB-KnV" firstAttribute="trailing" secondItem="e7F-Pk-b5r" secondAttribute="trailing" id="2Gh-oV-nqJ"/>
+                            <constraint firstItem="qPH-jB-KnV" firstAttribute="trailing" secondItem="hS4-XE-V6F" secondAttribute="trailing" constant="10" id="NiW-wE-f5l"/>
+                            <constraint firstItem="l8e-bd-cvc" firstAttribute="top" secondItem="qPH-jB-KnV" secondAttribute="top" constant="10" id="U0k-Uy-a1G"/>
+                            <constraint firstItem="hS4-XE-V6F" firstAttribute="top" secondItem="Caw-0d-2xi" secondAttribute="top" id="VQQ-gS-7sQ"/>
+                            <constraint firstItem="Caw-0d-2xi" firstAttribute="centerX" secondItem="qPH-jB-KnV" secondAttribute="centerX" id="WAS-12-C29"/>
+                            <constraint firstItem="l8e-bd-cvc" firstAttribute="leading" secondItem="qPH-jB-KnV" secondAttribute="leading" constant="10" id="f2F-eR-tck"/>
+                            <constraint firstItem="e7F-Pk-b5r" firstAttribute="top" secondItem="l8e-bd-cvc" secondAttribute="bottom" constant="15" id="nAx-ZE-gzU"/>
+                            <constraint firstItem="Caw-0d-2xi" firstAttribute="top" secondItem="l8e-bd-cvc" secondAttribute="top" id="nlv-1U-O7H"/>
+                            <constraint firstItem="e7F-Pk-b5r" firstAttribute="leading" secondItem="qPH-jB-KnV" secondAttribute="leading" id="pyu-YL-PGj"/>
+                            <constraint firstItem="qPH-jB-KnV" firstAttribute="bottom" secondItem="e7F-Pk-b5r" secondAttribute="bottom" id="uU3-fi-1MG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qPH-jB-KnV"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="e7F-Pk-b5r" id="RhF-27-3zm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrO-So-xMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="-4"/>
+        </scene>
+        <!--Order DetailVC-->
+        <scene sceneID="KQr-BP-4hs">
+            <objects>
+                <viewController storyboardIdentifier="orderDetail" id="o5H-E3-U8K" customClass="OrderDetailVC" customModule="AELFExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O6X-Td-zva">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsg-nK-Wwi" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="86" y="62.5" width="14" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Y2-4J-3fS">
+                                <rect key="frame" x="15" y="64" width="50" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="C64-vt-tYp"/>
+                                    <constraint firstAttribute="width" constant="50" id="kRo-9h-2Qz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="2"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEa-BA-Koo" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="71" y="62.5" width="14" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGs-Dj-HsM" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="385" y="62.5" width="14" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snP-hc-Br0" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="113.5" width="31" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="类型"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成交量/数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-vX-oBx" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="146.5" width="82" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="成交量/数量"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="均价/价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gds-xV-5V4" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="179.5" width="66" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="均价/价格"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手续费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTh-b9-3C6" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="212.5" width="46" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="手续费"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成交额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqD-9A-baO" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="245.5" width="46" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="成交额"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Th-tJ-uY6" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="378" y="113.5" width="21" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-Jx-16S" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="385" y="146.5" width="14" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-yU-5dK" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="385" y="179.5" width="14" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4h-RM-Afj" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="367" y="212.5" width="32" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoQ-Pl-MIX" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="374" y="245.5" width="25" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-LI-rdM">
+                                <rect key="frame" x="0.0" y="366.5" width="414" height="495.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="挂单TxID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-fg-eUR" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="278.5" width="61.5" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61.5" id="GBo-YL-Gao"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="挂单TxID"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- --" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um8-aa-WFo" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="374" y="278.5" width="25" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haF-yk-OcC">
+                                <rect key="frame" x="105" y="64" width="12" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.60784313725490191" green="0.61960784313725492" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFj-pd-JiO" userLabel="sepView">
+                                <rect key="frame" x="15" y="97.5" width="384" height="1"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92941176470588238" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cJG-Bd-h7R"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-0a-1sT" userLabel="sep">
+                                <rect key="frame" x="0.0" y="319.5" width="414" height="10"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="AOr-ay-5JR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lh-VJ-7kW" userLabel="headerView" customClass="View" customModule="AELFExchange" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="341.5" width="414" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易明细" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6c-u3-uk6" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="0.0" width="61.5" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" red="0.16078431372549018" green="0.12156862745098039" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="交易明细"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="15"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="w6c-u3-uk6" firstAttribute="leading" secondItem="9lh-VJ-7kW" secondAttribute="leading" constant="15" id="5CB-90-K0a"/>
+                                    <constraint firstItem="w6c-u3-uk6" firstAttribute="top" secondItem="9lh-VJ-7kW" secondAttribute="top" id="71D-bm-4dB"/>
+                                    <constraint firstAttribute="height" constant="25" id="H8D-WO-XoJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="w6c-u3-uk6" secondAttribute="bottom" id="lNQ-mQ-vDZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9lh-VJ-7kW" firstAttribute="top" secondItem="NGI-fg-eUR" secondAttribute="bottom" constant="45" id="1Zw-ih-gNC"/>
+                            <constraint firstItem="um8-aa-WFo" firstAttribute="trailing" secondItem="DoQ-Pl-MIX" secondAttribute="trailing" id="1bD-ZC-Trt"/>
+                            <constraint firstItem="haF-yk-OcC" firstAttribute="centerY" secondItem="Vsg-nK-Wwi" secondAttribute="centerY" id="2HE-cp-1XP"/>
+                            <constraint firstItem="yU8-Jx-16S" firstAttribute="trailing" secondItem="2Th-tJ-uY6" secondAttribute="trailing" id="4zP-h1-YNX"/>
+                            <constraint firstItem="Y4h-RM-Afj" firstAttribute="trailing" secondItem="l6p-yU-5dK" secondAttribute="trailing" id="6vE-IH-GXo"/>
+                            <constraint firstItem="Vsg-nK-Wwi" firstAttribute="centerY" secondItem="6Y2-4J-3fS" secondAttribute="centerY" id="7Wo-kE-i66"/>
+                            <constraint firstItem="DoQ-Pl-MIX" firstAttribute="centerY" secondItem="oqD-9A-baO" secondAttribute="centerY" id="AIa-ce-LQd"/>
+                            <constraint firstItem="tjj-LI-rdM" firstAttribute="top" secondItem="9lh-VJ-7kW" secondAttribute="bottom" id="COi-yb-pua"/>
+                            <constraint firstItem="NGI-fg-eUR" firstAttribute="top" secondItem="oqD-9A-baO" secondAttribute="bottom" constant="15" id="DCc-9z-eM9"/>
+                            <constraint firstItem="l6p-yU-5dK" firstAttribute="centerY" secondItem="gds-xV-5V4" secondAttribute="centerY" id="G1a-xX-iqR"/>
+                            <constraint firstItem="bEa-BA-Koo" firstAttribute="leading" secondItem="6Y2-4J-3fS" secondAttribute="trailing" constant="6" id="HzC-kh-U9Y"/>
+                            <constraint firstItem="hTh-b9-3C6" firstAttribute="leading" secondItem="gds-xV-5V4" secondAttribute="leading" id="JeD-Jl-bwB"/>
+                            <constraint firstItem="lGs-Dj-HsM" firstAttribute="centerY" secondItem="haF-yk-OcC" secondAttribute="centerY" id="Kld-MS-D4Z"/>
+                            <constraint firstItem="hTh-b9-3C6" firstAttribute="top" secondItem="gds-xV-5V4" secondAttribute="bottom" constant="15" id="LsA-E5-JAf"/>
+                            <constraint firstItem="2Th-tJ-uY6" firstAttribute="centerY" secondItem="snP-hc-Br0" secondAttribute="centerY" id="Lve-vv-duc"/>
+                            <constraint firstItem="wbd-mw-Qok" firstAttribute="trailing" secondItem="lGs-Dj-HsM" secondAttribute="trailing" constant="15" id="OCk-fw-SrR"/>
+                            <constraint firstItem="um8-aa-WFo" firstAttribute="centerY" secondItem="NGI-fg-eUR" secondAttribute="centerY" id="Oba-qx-whp"/>
+                            <constraint firstItem="gds-xV-5V4" firstAttribute="leading" secondItem="tk9-vX-oBx" secondAttribute="leading" id="QyO-7n-gek"/>
+                            <constraint firstItem="Vsg-nK-Wwi" firstAttribute="leading" secondItem="bEa-BA-Koo" secondAttribute="trailing" constant="1" id="RLF-p1-PyC"/>
+                            <constraint firstItem="snP-hc-Br0" firstAttribute="top" secondItem="pFj-pd-JiO" secondAttribute="bottom" constant="15" id="RXR-6B-fYz"/>
+                            <constraint firstItem="haF-yk-OcC" firstAttribute="leading" secondItem="Vsg-nK-Wwi" secondAttribute="trailing" constant="5" id="WhK-qg-k8l"/>
+                            <constraint firstItem="gds-xV-5V4" firstAttribute="top" secondItem="tk9-vX-oBx" secondAttribute="bottom" constant="15" id="Wn8-e0-K5k"/>
+                            <constraint firstItem="snP-hc-Br0" firstAttribute="leading" secondItem="wbd-mw-Qok" secondAttribute="leading" constant="15" id="Xi1-ZJ-7ok"/>
+                            <constraint firstItem="L1V-0a-1sT" firstAttribute="top" secondItem="NGI-fg-eUR" secondAttribute="bottom" constant="23" id="Ysp-vk-kCz"/>
+                            <constraint firstItem="tk9-vX-oBx" firstAttribute="top" secondItem="snP-hc-Br0" secondAttribute="bottom" constant="15" id="ZB2-E5-Ugd"/>
+                            <constraint firstItem="6Y2-4J-3fS" firstAttribute="leading" secondItem="wbd-mw-Qok" secondAttribute="leading" constant="15" id="ZKv-ei-2Yg"/>
+                            <constraint firstItem="DoQ-Pl-MIX" firstAttribute="trailing" secondItem="Y4h-RM-Afj" secondAttribute="trailing" id="ZvI-qf-sY0"/>
+                            <constraint firstItem="9lh-VJ-7kW" firstAttribute="leading" secondItem="wbd-mw-Qok" secondAttribute="leading" id="a6k-Cm-tDL"/>
+                            <constraint firstItem="NGI-fg-eUR" firstAttribute="leading" secondItem="oqD-9A-baO" secondAttribute="leading" id="amo-1B-nx3"/>
+                            <constraint firstItem="L1V-0a-1sT" firstAttribute="leading" secondItem="wbd-mw-Qok" secondAttribute="leading" id="cMo-Ke-3sG"/>
+                            <constraint firstItem="oqD-9A-baO" firstAttribute="top" secondItem="hTh-b9-3C6" secondAttribute="bottom" constant="15" id="d1F-vd-daT"/>
+                            <constraint firstItem="tk9-vX-oBx" firstAttribute="leading" secondItem="snP-hc-Br0" secondAttribute="leading" id="eve-6a-jaS"/>
+                            <constraint firstItem="wbd-mw-Qok" firstAttribute="trailing" secondItem="9lh-VJ-7kW" secondAttribute="trailing" id="iDr-F8-Lfd"/>
+                            <constraint firstItem="wbd-mw-Qok" firstAttribute="trailing" secondItem="tjj-LI-rdM" secondAttribute="trailing" id="jsI-WO-0JY"/>
+                            <constraint firstItem="um8-aa-WFo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NGI-fg-eUR" secondAttribute="trailing" constant="20" id="lyF-VV-L5C"/>
+                            <constraint firstItem="tjj-LI-rdM" firstAttribute="leading" secondItem="wbd-mw-Qok" secondAttribute="leading" id="mjI-Aa-2tq"/>
+                            <constraint firstItem="pFj-pd-JiO" firstAttribute="leading" secondItem="wbd-mw-Qok" secondAttribute="leading" constant="15" id="mp0-wA-pZO"/>
+                            <constraint firstItem="Y4h-RM-Afj" firstAttribute="centerY" secondItem="hTh-b9-3C6" secondAttribute="centerY" id="nWN-gc-eRh"/>
+                            <constraint firstItem="6Y2-4J-3fS" firstAttribute="top" secondItem="wbd-mw-Qok" secondAttribute="top" constant="20" id="nlB-Eh-If6"/>
+                            <constraint firstItem="bEa-BA-Koo" firstAttribute="centerY" secondItem="Vsg-nK-Wwi" secondAttribute="centerY" id="oSi-8Z-6KJ"/>
+                            <constraint firstAttribute="trailing" secondItem="pFj-pd-JiO" secondAttribute="trailing" constant="15" id="qXt-5o-g9f"/>
+                            <constraint firstItem="wbd-mw-Qok" firstAttribute="trailing" secondItem="2Th-tJ-uY6" secondAttribute="trailing" constant="15" id="r6x-fH-RG0"/>
+                            <constraint firstItem="yU8-Jx-16S" firstAttribute="centerY" secondItem="tk9-vX-oBx" secondAttribute="centerY" id="rfm-8v-R3d"/>
+                            <constraint firstItem="l6p-yU-5dK" firstAttribute="trailing" secondItem="yU8-Jx-16S" secondAttribute="trailing" id="uig-Ne-NG1"/>
+                            <constraint firstItem="wbd-mw-Qok" firstAttribute="bottom" secondItem="tjj-LI-rdM" secondAttribute="bottom" id="vb1-k6-qat"/>
+                            <constraint firstItem="pFj-pd-JiO" firstAttribute="top" secondItem="Vsg-nK-Wwi" secondAttribute="bottom" constant="17" id="wPg-KZ-qKC"/>
+                            <constraint firstItem="wbd-mw-Qok" firstAttribute="trailing" secondItem="L1V-0a-1sT" secondAttribute="trailing" id="yaF-1z-5g4"/>
+                            <constraint firstItem="oqD-9A-baO" firstAttribute="leading" secondItem="hTh-b9-3C6" secondAttribute="leading" id="zac-Ba-HuM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wbd-mw-Qok"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionLabel" destination="6Y2-4J-3fS" id="WCF-4Z-X8r"/>
+                        <outlet property="avgPriceLabel" destination="l6p-yU-5dK" id="c4m-xB-B6K"/>
+                        <outlet property="baseCurrencyLabel" destination="Vsg-nK-Wwi" id="xE8-rp-X2u"/>
+                        <outlet property="currencyLabel" destination="bEa-BA-Koo" id="LZy-vf-iYa"/>
+                        <outlet property="dealAmountLabel" destination="DoQ-Pl-MIX" id="fej-oo-D2v"/>
+                        <outlet property="dealAmtLabel" destination="yU8-Jx-16S" id="nTs-5R-eGE"/>
+                        <outlet property="dealPercentLabel" destination="lGs-Dj-HsM" id="CQR-Ae-nP6"/>
+                        <outlet property="feeLabel" destination="Y4h-RM-Afj" id="nSf-VL-Ei0"/>
+                        <outlet property="orderTypeLabel" destination="2Th-tJ-uY6" id="Lgy-yd-GbW"/>
+                        <outlet property="tableView" destination="tjj-LI-rdM" id="xQ3-ub-8Mw"/>
+                        <outlet property="timeLabel" destination="haF-yk-OcC" id="fQU-TL-Z2U"/>
+                        <outlet property="txidLabel" destination="um8-aa-WFo" id="8Hw-iz-jff"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNf-dI-8uJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1615.9420289855075" y="-4.0178571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-backarrow" width="18.5" height="12.5"/>
+        <image name="icon-mk-arrow-large-down" width="12.5" height="7.5"/>
+        <image name="icon-mk-arrow-small-down" width="9" height="5.5"/>
+        <image name="icon-mk-kline-index" width="17" height="16"/>
+        <image name="icon-mk-search" width="18" height="18"/>
+    </resources>
+</document>

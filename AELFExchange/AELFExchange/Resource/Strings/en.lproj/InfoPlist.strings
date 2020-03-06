@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  AELFExchange
+
+  Created by tng on 2019/1/7.
+  Copyright © 2019 aelf.io. All rights reserved.
+*/
+
+"NSCameraUsageDescription" = "Access Your Camera For";
+"NSMicrophoneUsageDescription" = "Access Your";
+"NSPhotoLibraryAddUsageDescription" = "Access your album for saving pictures";
+"NSPhotoLibraryUsageDescription" = "Access your album for selecting pictures";

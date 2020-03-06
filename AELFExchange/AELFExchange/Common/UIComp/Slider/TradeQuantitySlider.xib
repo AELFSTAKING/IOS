@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TradeQuantitySlider" customModule="CEXExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="51"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Yfg-ln-Cg1">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="51"/>
+                    <subviews>
+                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wN3-E3-hcF" userLabel="View1">
+                            <rect key="frame" x="0.0" y="0.0" width="91.5" height="51"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mJ-ma-p8E">
+                                    <rect key="frame" x="0.0" y="0.0" width="8" height="51"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="8" id="Jlq-W7-KlA"/>
+                                    </constraints>
+                                    <state key="normal" image="icon-trade-sliderpt-green"/>
+                                    <state key="selected" image="icon-trade-sliderpt-red"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="point1Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ken-J2-79X"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ese-Pb-f9N">
+                                    <rect key="frame" x="87.5" y="0.0" width="8" height="51"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="8" id="pk0-Lv-rpk"/>
+                                    </constraints>
+                                    <state key="normal" image="icon-trade-sliderpt-green"/>
+                                    <state key="selected" image="icon-trade-sliderpt-red"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="point2Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="dpp-Et-dVy"/>
+                                    </connections>
+                                </button>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gdN-H7-lkb">
+                                    <rect key="frame" x="9" y="24.5" width="77.5" height="2"/>
+                                    <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="trackTintColor" red="0.2627450980392157" green="0.27058823529411763" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="7mJ-ma-p8E" secondAttribute="bottom" id="319-xd-JwD"/>
+                                <constraint firstItem="gdN-H7-lkb" firstAttribute="centerY" secondItem="wN3-E3-hcF" secondAttribute="centerY" id="CQo-F2-hvB"/>
+                                <constraint firstItem="7mJ-ma-p8E" firstAttribute="top" secondItem="wN3-E3-hcF" secondAttribute="top" id="ESn-Ov-MhV"/>
+                                <constraint firstItem="gdN-H7-lkb" firstAttribute="leading" secondItem="wN3-E3-hcF" secondAttribute="leading" constant="9" id="M1s-HA-qnx"/>
+                                <constraint firstItem="7mJ-ma-p8E" firstAttribute="centerY" secondItem="wN3-E3-hcF" secondAttribute="centerY" id="R9F-Wb-kxp"/>
+                                <constraint firstAttribute="trailing" secondItem="gdN-H7-lkb" secondAttribute="trailing" constant="5" id="UuA-0W-QhY"/>
+                                <constraint firstItem="Ese-Pb-f9N" firstAttribute="centerY" secondItem="wN3-E3-hcF" secondAttribute="centerY" id="Ypj-xc-SYD"/>
+                                <constraint firstAttribute="bottom" secondItem="Ese-Pb-f9N" secondAttribute="bottom" id="ay7-lJ-Ebb"/>
+                                <constraint firstAttribute="trailing" secondItem="Ese-Pb-f9N" secondAttribute="trailing" constant="-4" id="cre-m9-a0Z"/>
+                                <constraint firstItem="7mJ-ma-p8E" firstAttribute="leading" secondItem="wN3-E3-hcF" secondAttribute="leading" id="kDz-5h-lsD"/>
+                                <constraint firstItem="Ese-Pb-f9N" firstAttribute="top" secondItem="wN3-E3-hcF" secondAttribute="top" id="tg1-sD-x1Y"/>
+                            </constraints>
+                        </view>
+                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tK-ib-TuA" userLabel="View2">
+                            <rect key="frame" x="91.5" y="0.0" width="91.5" height="51"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOc-da-N2c">
+                                    <rect key="frame" x="87.5" y="0.0" width="8" height="51"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="8" id="nD7-sD-Y17"/>
+                                    </constraints>
+                                    <state key="normal" image="icon-trade-sliderpt-green"/>
+                                    <state key="selected" image="icon-trade-sliderpt-red"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="point3Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xxx-X9-FKb"/>
+                                    </connections>
+                                </button>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pEM-iq-9xb">
+                                    <rect key="frame" x="5" y="24.5" width="81.5" height="2"/>
+                                    <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="trackTintColor" red="0.2627450980392157" green="0.27058823529411763" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="qOc-da-N2c" secondAttribute="bottom" id="5De-0B-z3q"/>
+                                <constraint firstItem="pEM-iq-9xb" firstAttribute="centerY" secondItem="8tK-ib-TuA" secondAttribute="centerY" id="Gcy-lB-rbW"/>
+                                <constraint firstItem="pEM-iq-9xb" firstAttribute="leading" secondItem="8tK-ib-TuA" secondAttribute="leading" constant="5" id="JiF-82-KHY"/>
+                                <constraint firstItem="qOc-da-N2c" firstAttribute="centerY" secondItem="8tK-ib-TuA" secondAttribute="centerY" id="hSo-pa-Pkz"/>
+                                <constraint firstItem="qOc-da-N2c" firstAttribute="top" secondItem="8tK-ib-TuA" secondAttribute="top" id="krL-pi-Yhe"/>
+                                <constraint firstAttribute="trailing" secondItem="pEM-iq-9xb" secondAttribute="trailing" constant="5" id="u5T-Uo-GgQ"/>
+                                <constraint firstAttribute="trailing" secondItem="qOc-da-N2c" secondAttribute="trailing" constant="-4" id="vDg-Xg-EID"/>
+                            </constraints>
+                        </view>
+                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9X-BD-mz6" userLabel="View3">
+                            <rect key="frame" x="183" y="0.0" width="91.5" height="51"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CG-OK-g7n">
+                                    <rect key="frame" x="87.5" y="0.0" width="8" height="51"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="8" id="dT7-0X-Cc6"/>
+                                    </constraints>
+                                    <state key="normal" image="icon-trade-sliderpt-green"/>
+                                    <state key="selected" image="icon-trade-sliderpt-red"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="point4Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="0kL-KJ-kj8"/>
+                                    </connections>
+                                </button>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-JW-tVf">
+                                    <rect key="frame" x="5" y="24.5" width="81.5" height="2"/>
+                                    <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="trackTintColor" red="0.2627450980392157" green="0.27058823529411763" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="1q8-JW-tVf" secondAttribute="trailing" constant="5" id="04g-Uh-4JF"/>
+                                <constraint firstItem="8CG-OK-g7n" firstAttribute="centerY" secondItem="C9X-BD-mz6" secondAttribute="centerY" id="71m-Jn-Qnj"/>
+                                <constraint firstItem="8CG-OK-g7n" firstAttribute="top" secondItem="C9X-BD-mz6" secondAttribute="top" id="Cxj-EF-33I"/>
+                                <constraint firstItem="1q8-JW-tVf" firstAttribute="centerY" secondItem="C9X-BD-mz6" secondAttribute="centerY" id="cNL-qE-O2S"/>
+                                <constraint firstAttribute="bottom" secondItem="8CG-OK-g7n" secondAttribute="bottom" id="czT-ql-upY"/>
+                                <constraint firstItem="1q8-JW-tVf" firstAttribute="leading" secondItem="C9X-BD-mz6" secondAttribute="leading" constant="5" id="mGL-9A-w3g"/>
+                                <constraint firstAttribute="trailing" secondItem="8CG-OK-g7n" secondAttribute="trailing" constant="-4" id="uR4-bQ-2ZF"/>
+                            </constraints>
+                        </view>
+                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-mZ-cpd" userLabel="View4">
+                            <rect key="frame" x="274.5" y="0.0" width="91.5" height="51"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yca-cl-GOT">
+                                    <rect key="frame" x="83.5" y="0.0" width="8" height="51"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="8" id="y5t-Sz-J1Q"/>
+                                    </constraints>
+                                    <state key="normal" image="icon-trade-sliderpt-green"/>
+                                    <state key="selected" image="icon-trade-sliderpt-red"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="point5Pressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="uKj-g0-o34"/>
+                                    </connections>
+                                </button>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OOA-Ky-03R">
+                                    <rect key="frame" x="5" y="24.5" width="77.5" height="2"/>
+                                    <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="trackTintColor" red="0.2627450980392157" green="0.27058823529411763" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="OOA-Ky-03R" firstAttribute="leading" secondItem="PeL-mZ-cpd" secondAttribute="leading" constant="5" id="05G-wA-ime"/>
+                                <constraint firstItem="OOA-Ky-03R" firstAttribute="centerY" secondItem="PeL-mZ-cpd" secondAttribute="centerY" id="3uH-p1-uWv"/>
+                                <constraint firstAttribute="trailing" secondItem="yca-cl-GOT" secondAttribute="trailing" id="8Io-gc-bwm"/>
+                                <constraint firstItem="yca-cl-GOT" firstAttribute="top" secondItem="PeL-mZ-cpd" secondAttribute="top" id="EbI-ak-myL"/>
+                                <constraint firstAttribute="trailing" secondItem="OOA-Ky-03R" secondAttribute="trailing" constant="9" id="L7S-IR-aAK"/>
+                                <constraint firstItem="yca-cl-GOT" firstAttribute="centerY" secondItem="PeL-mZ-cpd" secondAttribute="centerY" id="QNS-rQ-Pmw"/>
+                                <constraint firstAttribute="bottom" secondItem="yca-cl-GOT" secondAttribute="bottom" id="pxv-LJ-3o4"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Yfg-ln-Cg1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4nT-Pe-JEI"/>
+                <constraint firstItem="Yfg-ln-Cg1" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="l7g-Ps-gfe"/>
+                <constraint firstAttribute="bottom" secondItem="Yfg-ln-Cg1" secondAttribute="bottom" id="lOa-7K-c9w"/>
+                <constraint firstItem="Yfg-ln-Cg1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zFQ-St-N7m"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="point1L" destination="7mJ-ma-p8E" id="8P6-62-2sA"/>
+                <outlet property="point1R" destination="Ese-Pb-f9N" id="Zkm-OD-Vfz"/>
+                <outlet property="point2" destination="qOc-da-N2c" id="03g-BT-MiA"/>
+                <outlet property="point3" destination="8CG-OK-g7n" id="gfk-c7-Hb4"/>
+                <outlet property="point4" destination="yca-cl-GOT" id="c0i-z9-YNF"/>
+                <outlet property="sliderBg1" destination="gdN-H7-lkb" id="d2d-V0-PSw"/>
+                <outlet property="sliderBg2" destination="pEM-iq-9xb" id="lbv-qz-zNj"/>
+                <outlet property="sliderBg3" destination="1q8-JW-tVf" id="0dt-yr-N7j"/>
+                <outlet property="sliderBg4" destination="OOA-Ky-03R" id="ebv-NN-G9o"/>
+                <outlet property="view1" destination="wN3-E3-hcF" id="nl8-dA-1Jg"/>
+                <outlet property="view2" destination="8tK-ib-TuA" id="RGP-cY-Yav"/>
+                <outlet property="view3" destination="C9X-BD-mz6" id="KZT-iH-bOt"/>
+                <outlet property="view4" destination="PeL-mZ-cpd" id="DvN-FE-p5o"/>
+            </connections>
+            <point key="canvasLocation" x="86.956521739130437" y="-137.61160714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-trade-sliderpt-green" width="8" height="8"/>
+        <image name="icon-trade-sliderpt-red" width="8" height="8"/>
+    </resources>
+</document>

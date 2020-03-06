@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OrderBookHeaderView" customModule="AELFExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mc-6E-SPF" userLabel="sepView">
+                    <rect key="frame" x="0.0" y="47" width="414" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Y4m-fv-h0Z"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJl-7w-uwg" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                    <rect key="frame" x="349" y="14" width="50" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="W72-co-2Vi"/>
+                        <constraint firstAttribute="width" constant="50" id="xcV-yg-rDc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="全部" image="icon-trade-orderall">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="GrayText" value="1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="imageContentType" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD8-fR-4f5" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                    <rect key="frame" x="15" y="7" width="66" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fkb-Hs-c3w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <state key="normal" title="当前委托"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="GeneralText" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="currentPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZWd-lP-weL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN1-PL-BWk" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                    <rect key="frame" x="121" y="7" width="54" height="40"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <state key="normal" title="历史委托"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="GrayText" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="historyPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="WIN-BQ-2tb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8mc-6E-SPF" secondAttribute="trailing" id="55V-Fd-R2b"/>
+                <constraint firstAttribute="trailing" secondItem="PJl-7w-uwg" secondAttribute="trailing" constant="15" id="D7v-Sz-u15"/>
+                <constraint firstItem="tD8-fR-4f5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Gw0-XC-ET5"/>
+                <constraint firstItem="8mc-6E-SPF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Mda-Hg-CZ6"/>
+                <constraint firstItem="UN1-PL-BWk" firstAttribute="height" secondItem="tD8-fR-4f5" secondAttribute="height" id="Uzb-QV-jAl"/>
+                <constraint firstItem="UN1-PL-BWk" firstAttribute="leading" secondItem="tD8-fR-4f5" secondAttribute="trailing" constant="40" id="YEr-Uy-R0A"/>
+                <constraint firstItem="PJl-7w-uwg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pLC-w0-8sa"/>
+                <constraint firstAttribute="bottom" secondItem="8mc-6E-SPF" secondAttribute="bottom" id="sHn-M1-zC8"/>
+                <constraint firstItem="UN1-PL-BWk" firstAttribute="centerY" secondItem="tD8-fR-4f5" secondAttribute="centerY" id="tcV-rR-maW"/>
+                <constraint firstItem="8mc-6E-SPF" firstAttribute="top" secondItem="tD8-fR-4f5" secondAttribute="bottom" id="vLk-bL-Sz8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allButton" destination="PJl-7w-uwg" id="myo-Sn-ti4"/>
+                <outlet property="currentButton" destination="tD8-fR-4f5" id="Ra3-gs-HCu"/>
+                <outlet property="historyButton" destination="UN1-PL-BWk" id="8bf-ZO-422"/>
+                <outlet property="sepView" destination="8mc-6E-SPF" id="kh0-F1-tLR"/>
+            </connections>
+            <point key="canvasLocation" x="211" y="-96"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-trade-orderall" width="10" height="10.5"/>
+    </resources>
+</document>

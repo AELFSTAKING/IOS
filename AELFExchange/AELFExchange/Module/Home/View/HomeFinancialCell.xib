@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeFinancialCell" customModule="CEXExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="254"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="253.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nin-ds-Dob">
+                        <rect key="frame" x="15" y="25" width="74" height="34"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <state key="normal" title="理财产品">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="LocalizableButtonTitle" value="理财产品"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73F-xx-qYY" userLabel="sepView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.066666666669999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="JJi-Lj-SPZ"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-Vh-K5s" userLabel="sepView">
+                        <rect key="frame" x="0.0" y="69" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.066666666669999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Vmw-vM-erT"/>
+                        </constraints>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-IB-WPc">
+                        <rect key="frame" x="0.0" y="70" width="320" height="183.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Nin-ds-Dob" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="5os-8K-1Cv"/>
+                    <constraint firstItem="Nin-ds-Dob" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="7GN-NE-l9m"/>
+                    <constraint firstItem="DDg-Vh-K5s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7iw-Aa-0GX"/>
+                    <constraint firstAttribute="trailing" secondItem="DDg-Vh-K5s" secondAttribute="trailing" id="7pq-Jy-TBw"/>
+                    <constraint firstAttribute="trailing" secondItem="hDP-IB-WPc" secondAttribute="trailing" id="BO4-Py-KVE"/>
+                    <constraint firstItem="hDP-IB-WPc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Nzd-5b-08s"/>
+                    <constraint firstItem="73F-xx-qYY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ta3-Ct-4YW"/>
+                    <constraint firstItem="DDg-Vh-K5s" firstAttribute="top" secondItem="Nin-ds-Dob" secondAttribute="bottom" constant="10" id="U8S-Gi-VfZ"/>
+                    <constraint firstItem="hDP-IB-WPc" firstAttribute="top" secondItem="DDg-Vh-K5s" secondAttribute="bottom" id="UKA-KR-jGF"/>
+                    <constraint firstAttribute="trailing" secondItem="73F-xx-qYY" secondAttribute="trailing" id="Vtw-bk-G2P"/>
+                    <constraint firstItem="73F-xx-qYY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nS6-yQ-XsN"/>
+                    <constraint firstAttribute="bottom" secondItem="hDP-IB-WPc" secondAttribute="bottom" id="q0X-r8-w0N"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="sep1" destination="73F-xx-qYY" id="4Ih-GU-bvg"/>
+                <outlet property="sep2" destination="DDg-Vh-K5s" id="tsx-OD-1f5"/>
+                <outlet property="tableView" destination="hDP-IB-WPc" id="s7J-SZ-X6C"/>
+                <outlet property="titleLabel" destination="Nin-ds-Dob" id="fYN-NO-dPJ"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

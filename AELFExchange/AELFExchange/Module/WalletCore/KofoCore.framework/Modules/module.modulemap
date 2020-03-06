@@ -1,0 +1,11 @@
+framework module KofoCore {
+  umbrella header "KofoCore.h"
+
+  export *
+  module * { export * }
+}
+
+module KofoCore.Swift {
+    header "KofoCore-Swift.h"
+    requires objc
+}

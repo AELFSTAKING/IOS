@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MarketDelegateOrderCell" customModule="CEXExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFe-0p-V7r" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                        <rect key="frame" x="10" y="3" width="145" height="37.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="Progressable" value="1"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="FromRight" value="1"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="GreenProgress" value="1"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIx-aa-PTv" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                        <rect key="frame" x="13" y="0.0" width="19" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="13"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCh-ax-PhH" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                        <rect key="frame" x="133" y="0.0" width="19" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="13"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcE-Cs-Bvy" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                        <rect key="frame" x="160" y="3" width="150" height="37.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="Progressable" value="1"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="RedProgress" value="1"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaO-Fv-fKT" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                        <rect key="frame" x="163" y="0.0" width="19" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="13"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC9-VB-xsM" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                        <rect key="frame" x="288" y="0.0" width="19" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="13"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yCh-ax-PhH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Wg-mN-ZXc"/>
+                    <constraint firstItem="RC9-VB-xsM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Dd-hU-9y0"/>
+                    <constraint firstItem="vFe-0p-V7r" firstAttribute="trailing" secondItem="yCh-ax-PhH" secondAttribute="trailing" constant="3" id="7ys-RL-6ae"/>
+                    <constraint firstItem="vFe-0p-V7r" firstAttribute="leading" secondItem="rIx-aa-PTv" secondAttribute="leading" constant="-3" id="BfY-MV-Kpm"/>
+                    <constraint firstItem="yCh-ax-PhH" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-8" id="CaE-0y-sPO"/>
+                    <constraint firstItem="rIx-aa-PTv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GG2-F6-4av"/>
+                    <constraint firstItem="VcE-Cs-Bvy" firstAttribute="trailing" secondItem="RC9-VB-xsM" secondAttribute="trailing" constant="3" id="HC6-vy-wiA"/>
+                    <constraint firstItem="OaO-Fv-fKT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ibn-30-9m2"/>
+                    <constraint firstItem="VcE-Cs-Bvy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="LqD-53-c9f"/>
+                    <constraint firstAttribute="bottom" secondItem="vFe-0p-V7r" secondAttribute="bottom" constant="3" id="Tcn-G2-trh"/>
+                    <constraint firstAttribute="bottom" secondItem="OaO-Fv-fKT" secondAttribute="bottom" id="UyG-ZT-BxM"/>
+                    <constraint firstAttribute="bottom" secondItem="RC9-VB-xsM" secondAttribute="bottom" id="e7t-j3-tuC"/>
+                    <constraint firstAttribute="bottom" secondItem="yCh-ax-PhH" secondAttribute="bottom" id="eKa-La-T6o"/>
+                    <constraint firstItem="OaO-Fv-fKT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="3" id="jpP-Rm-bEq"/>
+                    <constraint firstAttribute="bottom" secondItem="VcE-Cs-Bvy" secondAttribute="bottom" constant="3" id="lhc-BU-ZLz"/>
+                    <constraint firstItem="rIx-aa-PTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="nLe-bR-shB"/>
+                    <constraint firstAttribute="bottom" secondItem="rIx-aa-PTv" secondAttribute="bottom" id="sht-XA-kDI"/>
+                    <constraint firstItem="VcE-Cs-Bvy" firstAttribute="leading" secondItem="OaO-Fv-fKT" secondAttribute="leading" constant="-3" id="wMZ-3y-nTf"/>
+                    <constraint firstItem="vFe-0p-V7r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="yri-Pf-dsX"/>
+                    <constraint firstAttribute="trailing" secondItem="RC9-VB-xsM" secondAttribute="trailing" constant="13" id="zhW-Tx-VYW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buyAmountLabel" destination="rIx-aa-PTv" id="FD0-Up-XwZ"/>
+                <outlet property="buyPriceLabel" destination="yCh-ax-PhH" id="D4V-KF-epr"/>
+                <outlet property="buyProgressLabel" destination="vFe-0p-V7r" id="azD-ff-lO3"/>
+                <outlet property="sellAmountLabel" destination="RC9-VB-xsM" id="Ejy-0h-S4f"/>
+                <outlet property="sellPriceLabel" destination="OaO-Fv-fKT" id="mB7-AR-pRc"/>
+                <outlet property="sellProgreessLabeel" destination="VcE-Cs-Bvy" id="B19-p2-ycD"/>
+            </connections>
+            <point key="canvasLocation" x="78" y="145"/>
+        </tableViewCell>
+    </objects>
+</document>

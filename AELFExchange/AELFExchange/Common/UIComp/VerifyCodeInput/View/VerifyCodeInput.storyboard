@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KVN-Tr-Rpr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Verify Code InputVC-->
+        <scene sceneID="VUo-4O-9Uf">
+            <objects>
+                <viewController storyboardIdentifier="verifyCodeInput" id="KVN-Tr-Rpr" customClass="VerifyCodeInputVC" customModule="CEXExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rzb-EX-Jxo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZw-FE-r4g" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="40" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="White" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Large" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="请输入验证码"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64x-uk-hxm" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                                <rect key="frame" x="15" y="70.5" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-3K-9X9" customClass="VerifyCodeInputView" customModule="CEXExchange" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="111" width="375" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="vyz-Pe-kJf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x秒后可重新发送" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRq-XP-I9o" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="171" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWj-5B-oJK">
+                                <rect key="frame" x="0.0" y="211.5" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.41960784313725491" green="0.43529411764705883" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jy8-Ia-2ib"/>
+                                    <constraint firstAttribute="width" constant="98" id="tBI-0h-lYQ"/>
+                                </constraints>
+                                <state key="normal" title="重新发送">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizableButtonTitle" value="重新发送"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resendPressed:" destination="KVN-Tr-Rpr" eventType="touchUpInside" id="bdw-dB-bhx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YZw-FE-r4g" firstAttribute="leading" secondItem="Gd3-1O-nvR" secondAttribute="leading" constant="15" id="1Wu-ZD-J5E"/>
+                            <constraint firstItem="qpO-3K-9X9" firstAttribute="leading" secondItem="Gd3-1O-nvR" secondAttribute="leading" id="3ki-To-Ybh"/>
+                            <constraint firstItem="64x-uk-hxm" firstAttribute="leading" secondItem="YZw-FE-r4g" secondAttribute="leading" id="6Zp-sA-RCR"/>
+                            <constraint firstItem="hRq-XP-I9o" firstAttribute="trailing" secondItem="qpO-3K-9X9" secondAttribute="trailing" id="FmR-6G-BfG"/>
+                            <constraint firstItem="Gd3-1O-nvR" firstAttribute="trailing" secondItem="YZw-FE-r4g" secondAttribute="trailing" constant="15" id="I21-Wh-vx5"/>
+                            <constraint firstItem="64x-uk-hxm" firstAttribute="top" secondItem="YZw-FE-r4g" secondAttribute="bottom" constant="10" id="Wty-t0-IR0"/>
+                            <constraint firstItem="YWj-5B-oJK" firstAttribute="leading" secondItem="hRq-XP-I9o" secondAttribute="leading" id="dWh-PM-Kyv"/>
+                            <constraint firstItem="64x-uk-hxm" firstAttribute="trailing" secondItem="YZw-FE-r4g" secondAttribute="trailing" id="hi9-u8-zsC"/>
+                            <constraint firstItem="hRq-XP-I9o" firstAttribute="leading" secondItem="qpO-3K-9X9" secondAttribute="leading" id="kzI-U4-xVQ"/>
+                            <constraint firstItem="hRq-XP-I9o" firstAttribute="top" secondItem="qpO-3K-9X9" secondAttribute="bottom" constant="15" id="l3n-D2-g2D"/>
+                            <constraint firstItem="YZw-FE-r4g" firstAttribute="top" secondItem="Gd3-1O-nvR" secondAttribute="top" constant="20" id="of4-NF-e4V"/>
+                            <constraint firstItem="YWj-5B-oJK" firstAttribute="top" secondItem="hRq-XP-I9o" secondAttribute="bottom" constant="20" id="pDr-0d-uep"/>
+                            <constraint firstItem="Gd3-1O-nvR" firstAttribute="trailing" secondItem="qpO-3K-9X9" secondAttribute="trailing" id="q1I-bi-F3a"/>
+                            <constraint firstItem="qpO-3K-9X9" firstAttribute="top" secondItem="64x-uk-hxm" secondAttribute="bottom" constant="20" id="qOp-fo-Bfg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gd3-1O-nvR"/>
+                    </view>
+                    <connections>
+                        <outlet property="codeInputView" destination="qpO-3K-9X9" id="aGk-Au-lp9"/>
+                        <outlet property="codeTypeLabel" destination="64x-uk-hxm" id="0Fv-6M-M9Q"/>
+                        <outlet property="resendButton" destination="YWj-5B-oJK" id="mxE-kL-aX2"/>
+                        <outlet property="secondsCountdownLabel" destination="hRq-XP-I9o" id="S2r-Sc-8bj"/>
+                        <outlet property="titleLabel" destination="YZw-FE-r4g" id="apu-YX-aDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wF-0Q-73X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330.39999999999998" y="-433.13343328335833"/>
+        </scene>
+    </scenes>
+</document>

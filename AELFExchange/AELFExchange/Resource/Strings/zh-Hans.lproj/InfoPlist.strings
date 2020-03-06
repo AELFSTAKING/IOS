@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  AELFExchange
+
+  Created by tng on 2019/1/7.
+  Copyright © 2019 aelf.io. All rights reserved.
+*/
+
+"NSCameraUsageDescription" = "需要访问您的相机来拍摄照片";
+"NSMicrophoneUsageDescription" = "需要访问您的麦克风";
+"NSPhotoLibraryAddUsageDescription" = "需要访问您的相册来保存图片";
+"NSPhotoLibraryUsageDescription" = "需要访问您的相册来选取图片";

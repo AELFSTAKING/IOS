@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MarketOrderHeaderDelegate" customModule="AELFExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6A-NI-9fg" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                    <rect key="frame" x="10" y="0.0" width="15.5" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="买"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGV-fr-tEu" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                    <rect key="frame" x="349.5" y="0.0" width="15.5" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="卖"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBq-5o-ccM" customClass="Label" customModule="AELFExchange" customModuleProvider="target">
+                    <rect key="frame" x="157" y="11" width="31" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="FontSize" value="12"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="买"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="Gray" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cad-aU-hTP" customClass="Button" customModule="AELFExchange" customModuleProvider="target">
+                    <rect key="frame" x="193" y="13.5" width="23" height="13"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="UyI-R7-MDj"/>
+                        <constraint firstAttribute="width" constant="23" id="gIO-Dh-Ddg"/>
+                    </constraints>
+                    <state key="normal" title="-"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="SmallFont" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="m6A-NI-9fg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="E01-S5-u0X"/>
+                <constraint firstItem="cad-aU-hTP" firstAttribute="leading" secondItem="PBq-5o-ccM" secondAttribute="trailing" constant="5" id="Fsa-hs-NHN"/>
+                <constraint firstItem="PBq-5o-ccM" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="RSn-Kj-0Ai"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="m6A-NI-9fg" secondAttribute="bottom" id="bbg-va-037"/>
+                <constraint firstItem="m6A-NI-9fg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ffn-eQ-tlg"/>
+                <constraint firstItem="cad-aU-hTP" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="fjH-wJ-kqp"/>
+                <constraint firstItem="PBq-5o-ccM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="-15" id="nEq-In-Ecc"/>
+                <constraint firstItem="eGV-fr-tEu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pKJ-dD-i2k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eGV-fr-tEu" secondAttribute="trailing" constant="10" id="qwi-Wv-sj4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eGV-fr-tEu" secondAttribute="bottom" id="uog-pZ-jb3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="buyLabel" destination="m6A-NI-9fg" id="f1Q-wK-l8G"/>
+                <outlet property="depthButton" destination="cad-aU-hTP" id="fue-sH-NnA"/>
+                <outlet property="priceLabel" destination="PBq-5o-ccM" id="Y5R-pa-CN0"/>
+                <outlet property="sellLabeel" destination="eGV-fr-tEu" id="KUc-Pe-jqu"/>
+            </connections>
+            <point key="canvasLocation" x="39.200000000000003" y="-235.68215892053973"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TransactionDetailHeaderView" customModule="AELFExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EWq-xM-tZF">
+                    <rect key="frame" x="172.5" y="23" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="CzW-Lg-Ujz"/>
+                        <constraint firstAttribute="width" constant="30" id="uAA-BY-sUG"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO9-sz-oAX">
+                    <rect key="frame" x="10" y="73" width="355" height="26"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-ZO-FhL">
+                    <rect key="frame" x="182" y="108" width="11.5" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.96862745098039216" green="0.60784313725490191" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jMQ-ZO-FhL" firstAttribute="top" secondItem="uO9-sz-oAX" secondAttribute="bottom" constant="9" id="6FN-sH-4Le"/>
+                <constraint firstItem="EWq-xM-tZF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="23" id="BEm-oV-aD2"/>
+                <constraint firstItem="uO9-sz-oAX" firstAttribute="top" secondItem="EWq-xM-tZF" secondAttribute="bottom" constant="20" id="NHd-sT-wg4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uO9-sz-oAX" secondAttribute="trailing" constant="10" id="SgX-Jo-Y5u"/>
+                <constraint firstItem="uO9-sz-oAX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="brj-6x-xQT"/>
+                <constraint firstItem="jMQ-ZO-FhL" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="llc-p1-B6T"/>
+                <constraint firstItem="EWq-xM-tZF" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="zyf-kF-5Ec"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="icon" destination="EWq-xM-tZF" id="VMQ-1k-IIn"/>
+                <outlet property="statusLabel" destination="jMQ-ZO-FhL" id="tQw-iX-FLH"/>
+                <outlet property="valueLabel" destination="uO9-sz-oAX" id="sm0-NB-UC6"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="-85.457271364317847"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TradeOrderCurrentHeader" customModule="CEXExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="278" height="49"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aih-8f-wT2" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="20.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="价格"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr7-dv-NDQ" customClass="Label" customModule="CEXExchange" customModuleProvider="target">
+                    <rect key="frame" x="257.5" y="0.0" width="20.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="General" value="1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="LocalizableText" value="数量"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aih-8f-wT2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="F4W-kj-8Fq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aih-8f-wT2" secondAttribute="bottom" constant="5" id="Lxo-tM-IhI"/>
+                <constraint firstItem="aih-8f-wT2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PcB-aQ-p8H"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gr7-dv-NDQ" secondAttribute="trailing" id="QbW-7c-6W9"/>
+                <constraint firstItem="Gr7-dv-NDQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ohC-fC-3U6"/>
+                <constraint firstItem="Gr7-dv-NDQ" firstAttribute="bottom" secondItem="aih-8f-wT2" secondAttribute="bottom" id="z0R-If-tFN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="priceTitleLabel" destination="aih-8f-wT2" id="p5b-ib-W48"/>
+                <outlet property="quantityTitleLabel" destination="Gr7-dv-NDQ" id="xhf-3x-ub0"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="-79.610194902548727"/>
+        </view>
+    </objects>
+</document>
