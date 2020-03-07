@@ -7,5 +7,5 @@
 ```
 cd AELFExchange
 pod install
-Run with Xcode
+替换所有代码中fixme://标记需要填充的信息，使用Xcode运行安装即可。
 ```
