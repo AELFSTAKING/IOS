@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4147A793134ACEB7BAE86254 /* Pods_AELFExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A087F658DFFD196173B8EA2F /* Pods_AELFExchange.framework */; };
-		AA199B5322F80A36001C99EF /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA99A40322DC99F700A2B0CD /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA1A6FFC22FA7ACC00B5CF4D /* RewardSummaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A6FFB22FA7ACC00B5CF4D /* RewardSummaryResponse.swift */; };
 		AA1D668C22FD4CBD0006477C /* RewardsSendListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1D668B22FD4CBD0006477C /* RewardsSendListResponse.swift */; };
 		AA1DD13B22EF144E00389D57 /* AELFWalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DD13A22EF144E00389D57 /* AELFWalletManager.swift */; };
@@ -614,7 +613,6 @@
 		AA99A44822DC99F700A2B0CD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A17822DC99F700A2B0CD /* Theme.swift */; };
 		AA99A44922DC99F700A2B0CD /* OConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = AA99A17B22DC99F700A2B0CD /* OConfig.m */; };
 		AA99A44A22DC99F700A2B0CD /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A17C22DC99F700A2B0CD /* Bundle.swift */; };
-		AA99A44B22DC99F700A2B0CD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA99A17D22DC99F700A2B0CD /* Info.plist */; };
 		AA99A44C22DC99F700A2B0CD /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A17E22DC99F700A2B0CD /* URLs.swift */; };
 		AA99A44D22DC99F700A2B0CD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A18222DC99F700A2B0CD /* HomeViewModel.swift */; };
 		AA99A44E22DC99F700A2B0CD /* HomeVC+Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A18422DC99F700A2B0CD /* HomeVC+Subscriber.swift */; };
@@ -952,13 +950,11 @@
 		AA99A61C22DC99F800A2B0CD /* FTPopOverMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A40022DC99F700A2B0CD /* FTPopOverMenuCell.swift */; };
 		AA99A61D22DC99F800A2B0CD /* UIScreen+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A40122DC99F700A2B0CD /* UIScreen+Frame.swift */; };
 		AA99A61E22DC99F800A2B0CD /* KYC.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA99A40222DC99F700A2B0CD /* KYC.xcassets */; };
-		AA99A61F22DC99F800A2B0CD /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA99A40322DC99F700A2B0CD /* App.framework */; };
 		AA99A62022DC99F800A2B0CD /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA99A40622DC99F700A2B0CD /* Asset.xcassets */; };
 		AA99A62122DC99F800A2B0CD /* VerifyCodeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A40A22DC99F700A2B0CD /* VerifyCodeEnum.swift */; };
 		AA99A62222DC99F800A2B0CD /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A40C22DC99F700A2B0CD /* BaseTabbarController.swift */; };
 		AA99A62322DC99F800A2B0CD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A40D22DC99F700A2B0CD /* BaseViewController.swift */; };
 		AA99A62422DC99F800A2B0CD /* LaunchAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A40E22DC99F700A2B0CD /* LaunchAnimationController.swift */; };
-		AA99A62522DC99F800A2B0CD /* FlutterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A40F22DC99F700A2B0CD /* FlutterController.swift */; };
 		AA99A62622DC99F800A2B0CD /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A41022DC99F700A2B0CD /* BaseTableViewController.swift */; };
 		AA99A62722DC99F800A2B0CD /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A41122DC99F700A2B0CD /* BaseNavigationController.swift */; };
 		AA99A62822DC99F800A2B0CD /* AELFTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99A41322DC99F700A2B0CD /* AELFTokenManager.swift */; };
@@ -1048,7 +1044,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AA199B5322F80A36001C99EF /* App.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2023,14 +2018,12 @@
 		AA99A40022DC99F700A2B0CD /* FTPopOverMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenuCell.swift; sourceTree = "<group>"; };
 		AA99A40122DC99F700A2B0CD /* UIScreen+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Frame.swift"; sourceTree = "<group>"; };
 		AA99A40222DC99F700A2B0CD /* KYC.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = KYC.xcassets; sourceTree = "<group>"; };
-		AA99A40322DC99F700A2B0CD /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
 		AA99A40522DC99F700A2B0CD /* code_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code_template.h; sourceTree = "<group>"; };
 		AA99A40622DC99F700A2B0CD /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		AA99A40A22DC99F700A2B0CD /* VerifyCodeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyCodeEnum.swift; sourceTree = "<group>"; };
 		AA99A40C22DC99F700A2B0CD /* BaseTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
 		AA99A40D22DC99F700A2B0CD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AA99A40E22DC99F700A2B0CD /* LaunchAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchAnimationController.swift; sourceTree = "<group>"; };
-		AA99A40F22DC99F700A2B0CD /* FlutterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlutterController.swift; sourceTree = "<group>"; };
 		AA99A41022DC99F700A2B0CD /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		AA99A41122DC99F700A2B0CD /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		AA99A41322DC99F700A2B0CD /* AELFTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AELFTokenManager.swift; sourceTree = "<group>"; };
@@ -2121,7 +2114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA99A5C522DC99F800A2B0CD /* GT3Captcha.framework in Frameworks */,
-				AA99A61F22DC99F800A2B0CD /* App.framework in Frameworks */,
 				AA7DFD8D22F9CC140013CF6D /* KofoCore.framework in Frameworks */,
 				4147A793134ACEB7BAE86254 /* Pods_AELFExchange.framework in Frameworks */,
 			);
@@ -3559,14 +3551,12 @@
 		AA99A2FA22DC99F700A2B0CD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				AA99A40322DC99F700A2B0CD /* App.framework */,
 				AA99A40622DC99F700A2B0CD /* Asset.xcassets */,
 				AA99A31522DC99F700A2B0CD /* Assets.xcassets */,
 				AA99A40222DC99F700A2B0CD /* KYC.xcassets */,
 				AA99A2FB22DC99F700A2B0CD /* Market.xcassets */,
 				AA99A31622DC99F700A2B0CD /* Trade.xcassets */,
 				AA99A31722DC99F700A2B0CD /* Dependency */,
-				AA99A40722DC99F700A2B0CD /* Doc */,
 				AA99A30322DC99F700A2B0CD /* File */,
 				AA99A40422DC99F700A2B0CD /* Script */,
 				AA99A2FC22DC99F700A2B0CD /* Strings */,
@@ -4299,13 +4289,6 @@
 			path = Script;
 			sourceTree = "<group>";
 		};
-		AA99A40722DC99F700A2B0CD /* Doc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Doc;
-			sourceTree = "<group>";
-		};
 		AA99A40822DC99F700A2B0CD /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -4334,7 +4317,6 @@
 				AA99A40C22DC99F700A2B0CD /* BaseTabbarController.swift */,
 				AA99A41022DC99F700A2B0CD /* BaseTableViewController.swift */,
 				AA99A40D22DC99F700A2B0CD /* BaseViewController.swift */,
-				AA99A40F22DC99F700A2B0CD /* FlutterController.swift */,
 				AA99A40E22DC99F700A2B0CD /* LaunchAnimationController.swift */,
 			);
 			path = Controller;
@@ -5092,7 +5074,6 @@
 				AA4BF58A22E05F840014B704 /* omg.png in Resources */,
 				AA4BF67322E05F840014B704 /* cs.png in Resources */,
 				AA4BF58822E05F840014B704 /* vrsc.png in Resources */,
-				AA99A44B22DC99F700A2B0CD /* Info.plist in Resources */,
 				AA4BF4B522E05F840014B704 /* add-white.png in Resources */,
 				AA4BF50B22E05F840014B704 /* audr-white.png in Resources */,
 				AA4BF53122E05F840014B704 /* auto.png in Resources */,
@@ -5428,7 +5409,6 @@
 				AA99A5A822DC99F800A2B0CD /* Jockey.m in Sources */,
 				AA99A61D22DC99F800A2B0CD /* UIScreen+Frame.swift in Sources */,
 				AA99A58622DC99F800A2B0CD /* PageboyViewController+ScrollCalculations.swift in Sources */,
-				AA99A62522DC99F800A2B0CD /* FlutterController.swift in Sources */,
 				AA1DD13D22EF146500389D57 /* AELFWalletManager+ETH.swift in Sources */,
 				AA99A62D22DC99F800A2B0CD /* MQTTManager.swift in Sources */,
 				AA99A4EB22DC99F800A2B0CD /* MarketKLineVC+KLine.swift in Sources */,

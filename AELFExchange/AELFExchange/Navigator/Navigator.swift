@@ -15,8 +15,6 @@ public let MainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
 public let LoginAndRegisterStoryBoard = UIStoryboard(name: "LoginAndRegister", bundle: nil)
 public let IEONavigation = MainStoryBoard.instantiateViewController(withIdentifier: "activityNavigation") as! UINavigationController
 
-private let sharedFlutterControllerProfile = FlutterController()
-
 class Navigator {
     
     fileprivate static let ___donotUseThisVariableOfNavigator = Navigator()
@@ -166,10 +164,5 @@ extension UIViewController {
 
 // MARK: - Flutter Module.
 extension UIViewController {
-    
-    func FlutterModuleProfile() -> FlutterController {
-        sharedFlutterControllerProfile.setInitialRoute("/profile")
-        return sharedFlutterControllerProfile
-    }
     
 }

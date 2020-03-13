@@ -32,6 +32,7 @@ class KofoSDKManager {
             kofoId: kofoId,
             gatewayUrl: URLs.shared().kofoSDKHost(),
             settlementServerUrl: URLs.shared().kofoSDKHost(),
+            language: .ZH_CN,
             delegate: self
         )
         logdebug(content: "<< kofo sdk init status: \(status)")

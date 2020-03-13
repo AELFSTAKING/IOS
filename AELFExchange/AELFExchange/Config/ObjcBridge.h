@@ -19,7 +19,5 @@
 #import "OConfig.h"
 #import "FSActionSheet.h"
 #import "NetworkIntercepter.h"
-#import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
-#import <image_picker/ImagePickerPlugin.h>
 
 #endif /* ObjcBridge_h */

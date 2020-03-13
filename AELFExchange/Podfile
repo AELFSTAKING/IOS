@@ -45,23 +45,20 @@ target 'AELFExchange' do
   # Dependencies of Scrollable Label.
   pod 'ReactiveObjC', '~> 3.1.0'
   
-#  暂时需要手动更改Swift版本,因为和flutter_application_path冲突,解决方案:https://stackoverflow.com/questions/40508957/invalid-podfile-file-specifying-multiple-post-install-hooks-is-unsupported
-#  post_install do |installer|
-#      installer.pods_project.targets.each do |target|
-#          if target.name == 'DatePickerDialog' || target.name == 'CircleProgressView'
-#              target.build_configurations.each do |config|
-#                  config.build_settings['SWIFT_VERSION'] = '4.0'
-#              end
-#          end
-#          if target.name == 'Alamofire'
-#              target.build_configurations.each do |config|
-#                  config.build_settings['SWIFT_VERSION'] = '4.2'
-#              end
-#          end
-#      end
-#  end
+  post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          if target.name == 'DatePickerDialog' || target.name == 'CircleProgressView'
+              target.build_configurations.each do |config|
+                  config.build_settings['SWIFT_VERSION'] = '4.0'
+              end
+          end
+          if target.name == 'Alamofire'
+              target.build_configurations.each do |config|
+                  config.build_settings['SWIFT_VERSION'] = '4.2'
+              end
+          end
+      end
+  end
 
 end
 
-flutter_application_path = '../../cex-flutter/cex_flutter_module'
-eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)

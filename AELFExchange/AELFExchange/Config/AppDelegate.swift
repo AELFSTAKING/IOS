@@ -6,6 +6,8 @@
 //  Copyright © 2019 aelf.io. All rights reserved.
 //
 
+//⚠️⚠️⚠️ WARNING: To run this project, you must resolve all the issue that marked with //fixme: ⚠️⚠️⚠️
+
 import UIKit
 import AVFoundation
 
@@ -23,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         URLProtocol.registerClass(NetworkIntercepter.self)
         //OConfig.clearAllUIWebViewData(forDomain: "//fixme:the server domain")
-        ⚠️⚠️⚠️ WARNING: To run this project, you must resolve all the issue that marked with //fixme: ⚠️⚠️⚠️
         
 //        let animationController = LaunchAnimationController()
 //        animationController.completion = {
