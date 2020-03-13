@@ -17,7 +17,7 @@ pod install
 · 工程运行SDK目录（即需要配置的SDK目录）：AELFExchange/Module/WalletCore
 ```
 
-- 配置服务器域名（必要）
+- 配置网络相关信息（必要）
 ```
 文件：AELFExchange/Config/URLs.swift 第227行开始
 总共三个环境，环境切换：Info.plist设置Config-Environment（值：Prod、Stage、Test分别对应URLs.swift配置环境）
