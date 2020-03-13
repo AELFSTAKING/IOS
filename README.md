@@ -10,12 +10,14 @@ cd AELFExchange
 pod install
 ```
 
+
 - 配置KofoCoreSDK（必要）
 ```
 项目依赖KofoCoreSDK，运行模拟器/真机需要使用指定SDK，直接替换SDK文件即可（默认模拟器环境）
 · SDK文件目录：AELFExchange/KofoCoreSDK/
 · 工程运行SDK目录（即需要配置的SDK目录）：AELFExchange/Module/WalletCore
 ```
+
 
 - 配置网络相关信息（必要）
 ```
@@ -30,6 +32,7 @@ ethBlockchainUrlProd：以太坊主网/测试网络地址
 ignoreLogUrls：忽略日志打印接口路径列表
 ignoreSSLURLHosts：忽略SSL校验接口路径列表
 ```
+
 
 - 其他可选配置
 ```
