@@ -1,6 +1,6 @@
 # client（Staking Planet iOS 版本 APP）
 
-## [介绍与使用文档](https://github.com/AELFSTAKING/ANDROID/blob/master/README.md)
+## [介绍与使用文档](https://github.com/AELFSTAKING/Android#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%88%96%E5%AF%BC%E5%85%A5%E8%B4%A6%E6%88%B7)
 
 
 ## 安装运行
