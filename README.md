@@ -4,8 +4,8 @@
 
 
 ## 安装运行
+- 安装依赖（必要）
 ```
-1、安装依赖（必要）
 cd AELFExchange
 pod install
 
